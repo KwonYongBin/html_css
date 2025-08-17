@@ -25,7 +25,7 @@
     Commons
 */
 * {
-    /* 공통적으로 사용되는 폰트, 여백, 패딩 ..*/
+    /* 공통적으로 사용되는 font, margin, padding ..*/
     font-family: 'Open Sans', 'sans-serif'; 
     box-sizing: border-box;
     margin: 0;  padding: 0;
