@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        ul,ol,li,td,dt,dd {list-style: none;}
+        .top-cont {
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .header-logo {
+            display: inline-block;
+        }
+        .header-left, .header-right {
+            width: 400;
+            display: inline-block;
+        }
+        .header-left ul li{
+            padding: 0 20px;
+            display: inline-block;
+        }
+        .header-right ul li {
+            padding: 0 10px;
+            display: inline-block;
+        }
+        header a {
+            color: #333;
+        }
+        nav ul li ul li {display: none;}
+        nav ul {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            padding: 0 50px;
+        }
+        nav ul li:hover ul li {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-cont">
+            <div class="header-left">
+                <ul>
+                    <li>
+                        <a href="#">인스타그램</a>
+                    </li>
+                    <li>
+                        <a href="#">유튜브</a>
+                    </li>
+                    <li>
+                        <a href="#">페이스북</a>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="header-logo"><a href="#"><img src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo.png" alt="로고"></a></h1>
+            <div class="header-right">
+                <ul>
+                    <li>
+                        <a href="#">멤버십</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#">단체관람/대관문의</a>
+                    </li>
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">예매</a>
+                    <ul>
+                        <li><a href="#">예매하기</a></li>
+                        <li><a href="#">상영시간표</a></li>
+                        <li><a href="#">할인안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">영화</a>
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="#">개봉예정작</a></li>
+                        <li><a href="#">아르떼</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">영화관</a>
+                    <ul>
+                        <li><a href="#">스페셜관</a></li>
+                        <li><a href="#">서울</a></li>
+                        <li><a href="#">경기/인천</a></li>
+                        <li><a href="#">충청/대전</a></li>
+                        <li><a href="#">전라/광주</a></li>
+                        <li><a href="#">경북/대구</a></li>
+                        <li><a href="#">경남/부상/울산</a></li>
+                        <li><a href="#">강원</a></li>
+                        <li><a href="#">제주</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">이벤트</a>
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">시사회/무대인사</a></li>
+                        <li><a href="#">HOT</a></li>
+                        <li><a href="#">제휴할인</a></li>
+                        <li><a href="#">우리동네영화관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">스토어</a>
+                    <ul>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">관람권</a></li>
+                        <li><a href="#">스낵음료</a></li>
+                        <li><a href="#">포토카드</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

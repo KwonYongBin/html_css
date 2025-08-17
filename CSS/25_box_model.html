@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* Top, Right, Bottom, left 순서의 시계방향으로 값을 정의
+           margin : 10px, 5px, 10px, 5px;
+           margin : 10px, 5px;
+           margin-bottom : 10px;
+        */
+        h3 {
+            border: 1px solid gray; 
+            text-align: center;
+            padding: 10px; /*  */
+            margin: 10px;
+
+        }
+        .padding h3 {
+            margin: 20px 10px;
+        }
+        .padding, .margin {
+            width: 30%;
+        }
+        .padding {
+            border: 1px solid blue;
+            margin: 30px 100px 50px 100px;
+        }
+        .margin {
+            border: 1px solid red;
+            margin-left: 50px;
+            padding-left: 50px;
+        }
+        .inline {
+            width: 30%;
+            border: 5px solid green;
+            /* padding: 20px 10px; */
+            text-align: center;
+        }
+        .inline span {
+            border: 2px solid tomato;
+            padding: 20px; /* 인라인 상태에서도 사용 가능하지만 부모가 가지고있는 공간을 넘어서 적용된다. */
+            /* margin: 20px;*/
+            /* display: inline-block; */
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model Style : content, border, padding, margin</h1>
+    <div class="inline">
+        <span>Span Test!!</span>
+    </div>
+    <div class="padding">
+        <h3>padding</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt possimus harum temporibus aperiam officiis. Qui, deleniti minima placeat praesentium est, dolorum doloremque dolor sed ut officiis ab voluptatem, fugit dolore.
+    </div>
+    <div class="margin">
+        <h3>margin</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt possimus harum temporibus aperiam officiis. Qui, deleniti minima placeat praesentium est, dolorum doloremque dolor sed ut officiis ab voluptatem, fugit dolore.
+    </div>
+</body>
+</html>

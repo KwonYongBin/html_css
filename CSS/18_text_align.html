@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Align</title>
+    <style>
+        p {
+            background-color: aquamarine;
+        }
+        span{
+            background-color: coral; text-align: center;
+        }
+        .left {
+            text-align: left;
+        }
+        .center {
+            text-align: center;
+        }
+        .right {
+            text-align: right;
+        }
+        .justify {
+            text-transform: uppercase; /* 전체 문자 대문자 */
+            text-align: justify;
+            width: 50%;
+            background-color: aqua;
+            line-height: 20px;
+
+        }
+        .letter {
+            text-transform: lowercase; /* 전체 문자 소문자 */
+            width: 700px;
+            border: 1px solid blue;
+            letter-spacing: 5px;
+            text-indent: 200px;
+        }
+        .word {
+            text-transform: capitalize; /* 첫 시작 문자 대문자 */
+            width: 700px;
+            border: 1px solid green;
+            word-spacing: 15px;
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Align</h1>
+    <span>inline level - span</span><br>
+    <p class="left">Text Align - left</p>
+    <p class="center">Text Align - center <span>add-span</span></p>
+    <p class="right">Text Align - right</p>
+    <p class="justify">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Mollitia ad quisquam molestias amet sint perferendis assumenda? <br>
+        Velit atque quis voluptate officia cumque incidunt ipsa! <br>
+        Sequi impedit est nihil molestiae neque!
+    </p>
+    <p class="letter">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Mollitia ad quisquam molestias amet sint perferendis assumenda? <br>
+        Velit atque quis voluptate officia cumque incidunt ipsa! <br>
+        Sequi impedit est nihil molestiae neque!
+    </p>
+    <p class="word">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Mollitia ad quisquam molestias amet sint perferendis assumenda? <br>
+        Velit atque quis voluptate officia cumque incidunt ipsa! <br>
+        Sequi impedit est nihil molestiae neque!
+    </p>
+</body>
+</html>

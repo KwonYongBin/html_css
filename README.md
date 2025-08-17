@@ -1,2 +1,2 @@
-# html_css
-실습용
+# webpublish
+HTML, SCC, JAVASCRIPT, STUDY

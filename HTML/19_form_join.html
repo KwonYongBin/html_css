@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        ul,li{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+        p{
+            padding: 0;margin: 0;
+        }
+        ul .li1 input {width: 350px; height: 35px;}
+        label{display: block;}
+    </style>
+</head>
+<body>
+    <div></div>
+        <h1>회원 가입</h1>
+        <ul>
+            <h2>필수항목</h2>
+            <li class="li1">
+                <label form="">아이디</label>
+                <input type="text" name="아이디">
+                <label form="">비밀번호</label>
+                <input type="text" name="비밀번호">
+                <label form="">이메일</label>
+                <input type="text" name="이메일">
+                <label form="">성명</label>
+                <input type="text" name="성명">
+                <label form="">나이</label>
+                <input type="text" name="나이">
+            </li>
+            <ul>
+                <h2>당신에 대해서 알고 싶어요!</h2>
+                <li>
+                    <strong>취미를 선택해 주세요</strong>
+                    <input type="radio" name="hobby">
+                    <label>게임하기</label>
+                    <input type="radio" name="hobby">
+                    <label>음악듣기</label>
+                    <input type="radio" name="hobby">
+                    <label>아이스음료마시기</label>
+                </li>
+                <li>
+                    <strong>좋아하는 음료를 선택해 주세요. (중복선택가능)</strong>
+                    <input type="checkbox" name="selectDrink" value="shake">
+                    <label>쉐이크 종류 음료</label>
+                    <input type="checkbox" name="selectDrink" value="tea">
+                    <label>티 종류 음료</label>
+                    <input type="checkbox" name="selectDrink" value="coffee">
+                    <label >커피종류 음료</label>
+                </li>
+                <li>
+                    <label>동아리 참석 가능 날짜:</label>
+                    <input type="date" name="date">
+                </li>
+                <li>
+                    <label>얼.죽.아에서 참여하고 싶은 모임은?:</label>
+                    <select name="group">
+                        <option value="">선택해주새요</option>
+                        <option value="">게임 모임</option>
+                        <option value="">음악감상 모임</option>
+                        <option value="">런님 모임</option>
+                    </select>
+                </li>
+                <li>
+                    <label>포트폴리오 제출하기</label>
+                    <button>포트폴리오 업로드</button>
+                    <input type="file">
+                </li>
+                <li>
+                    <label>마지막으로 하고 싶은 말은?</label>
+                    <textarea name="intro" cols="50" rows="10"></textarea>
+                </li>
+                <li>
+                    <button>다시하기</button>
+                    <button>전송하기</button>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</body>
+</html>

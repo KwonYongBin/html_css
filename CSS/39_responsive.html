@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        @media (max-width: 1080px) {
+            #wrapper {background-color: silver;}
+            #wrapper header {background-color: red;}
+        }
+        @media (max-width: 760px) {
+            #wrapper {background-color: blue;}
+            #wrapper header {display: none;}
+            #wrapper main {background-color: aqua;}
+        }
+        @media (max-width: 600px) {
+            #wrapper {background-color: green;}
+            #wrapper header {display: block;}
+            #wrapper footer {background-color: blueviolet;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive - 반응형</h1>
+    <div id="wrapper">
+        <header>
+            <h1>headre</h1>
+        </header>
+        <main>
+            <h1>main</h1>
+        </main>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+</body>
+</html>

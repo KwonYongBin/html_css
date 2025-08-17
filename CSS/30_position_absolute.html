@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+        h1 {
+            background-color: blueviolet;
+        }
+        img {
+            width: 150px;
+        }
+        .absolute, .fixed {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .absolute > img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .fixed > img {
+            position: fixed;
+        }
+        .img1 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Position Absolute</h1>
+    <img src="../images/img05.jpg" alt="" class="img1">
+    <div class="absolute">
+        <img src="../images/img03.jpg" alt="">
+    </div>
+    <div class="fixed">
+        <img src="../images/img04.jpg" alt="">
+    </div>
+</body>
+</html>

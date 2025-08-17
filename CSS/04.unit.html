@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit</title>
+    <style>
+        .pixel {
+            font-size: 2em; /* 폰트사이즈 픽셀기준 x1.2 */
+            width: 1000px; /* 절대 사이즈*/
+            background-color: aquamarine;
+            /* overflow: hidden; */
+        }
+        .percent {
+            width: 30%; /*상대 사이즈*/
+            background-color: tomato;
+        }
+        .h5-a{
+            width: 50%;
+            background-color: tomato;
+        }
+        .h5-b{
+            width: 200px;
+            background-color: aquamarine;
+        }
+        /* em - 단위가 쓰여진 곳의 폰트 사이즈의 배수
+        rem - 문서 폰트사이즈 16px기준의  */
+    </style>
+</head>
+<body>
+    <h1>CSS 단위</h1>
+    <h2>pixel(픽셀)</h2>
+    <div class="pixel">
+        <h5 class="h5-a">CSS - pixel</h5> <!-- 부모의 크기를 상속 받지만 크기를 따로 정할 수 있다(비추)-->
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+        Reprehenderit esse temporibus autem libero, consequuntur est <br>
+        necessitatibus at magni quidem, amet, voluptas nulla eaque <br>
+        tempora debitis alias? Voluptatum laboriosam quibusdam repellendus!
+    </div>
+    <hr>
+    <h2>percent(퍼센트 : %)</h2>
+    <div class="percent">
+        <h5 class="h5-b">CSS - percent</h5>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+        Reprehenderit esse temporibus autem libero, consequuntur est <br>
+        necessitatibus at magni quidem, amet, voluptas nulla eaque <br>
+        tempora debitis alias? Voluptatum laboriosam quibusdam repellendus!
+    </div>
+</body>
+</html>

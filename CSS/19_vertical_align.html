@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Align</title>
+    <style>
+        span{
+            border: 1px solid blue;
+        }
+        .base, .top, .middle, .bottom {
+            font-size: 0.5rem;
+            background-color: aquamarine;
+        }
+        .base {
+            vertical-align: baseline;
+        }
+        .top {
+            vertical-align: top;
+        }
+        .middle {
+            vertical-align: middle;
+        }
+        .bottom {
+            vertical-align: bottom;
+        }
+        img {
+            border: 1px solid blue;
+        }
+        label {
+            font-size: 12px;
+            vertical-align: top;
+            letter-spacing: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vertical Align</h1>
+    <img src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo.png" alt="로고">
+    <label>롯데시네마</label>
+    <h2>
+        <span>Vertical Align : baceline</span>
+        <span class="base">baceline</span>
+    </h2>
+    <h2>
+        <span>Vertical Align : top</span>
+        <span class="top">top</span>
+    </h2>
+    <h2>
+        <span>Vertical Align : middle</span>
+        <span class="middle">middle</span>
+    </h2>
+    <h2>
+        <span>Vertical Align : bottom</span>
+        <span class="bottom">bottom</span>
+    </h2>
+</body>
+</html>

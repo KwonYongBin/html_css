@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Calss Selector</title>
+    <style>
+        a.naver:hover{
+            background-color: blue;
+            color: white;
+        }
+        a.google:hover {
+            background-color: tomato;
+            color: white;
+        }
+        a.daum:hover {
+            background-color: aquamarine;
+            color: white;
+        }
+        a.navar:active{text-decoration: none;}
+        a.naver:visited{color: red;}
+        input:focus{background-color: bisque;}
+        h1::after{content: 'h1태그after'; color: green;} /*h1 태그 뒤에 content에 해당하는 내용을 생성하여 추가하고, 글자색상 초록*/
+        h1::before{content: 'h1태그before'; color: red;} /*h1 태그 뒤에 content에 해당하는 내용을 생성하여 추가하고, 글자색상 초록*/
+    </style>
+</head>
+<body>
+    <h1>Pseudo Calss Selector</h1>
+    <p>
+        <a href="http://www.naver.com" class="naver">Naver</a>
+        <a href="http://www.google.com" class="google">Google</a>
+        <a href="http://www.kakao.net" class="daum">Daum</a>
+    </p>
+    <form action="#">
+        <ul>
+            <li>
+                <label for="name">이름</label>
+                <input type="text" name="name">
+            </li>
+            <li>
+                <label for="address">주소</label>
+                <input type="text" name="address">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

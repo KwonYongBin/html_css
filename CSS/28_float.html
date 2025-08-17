@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .box-group {
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        .box-group > div {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            margin: 0 10px;
+        }
+        .box-group > p {
+            clear: both;
+        }
+        .nav_box { background-color: #333; text-align: center; overflow: hidden; margin-bottom: 50px;}
+        .nav_box {}
+        .nav_box  .f-l {float: left;}
+        .nav_box li {display: inline-block; line-height: 50px;}
+        .nav_box li a{color: #fff; padding: 20px;}
+        .f-l li a i {margin-right: 10px;}
+        .nav_box .logo {float: left; padding-left: 470px;; margin: 0 auto;}
+        .nav_box .logo a {color: #fff;}
+        .nav_box .f-r {float: right;}
+        
+        .image {
+            overflow: hidden;
+        }
+        .image img {
+            width: 500px;
+            height: 500px;
+            float: left;
+            margin-right: 20px;
+            padding-bottom: 20px;
+        }
+
+        .image2 img {
+            width: 100px;
+        }
+        .image2 p {
+            width: 500px;
+            display: inline-block;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float Style 블록 레벨의 태그를 한줄로 정렬</h1>
+    <div class="box-group">
+        <div>box 1</div>
+        <div>box 2</div>
+        <div>box 3</div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum suscipit! Sapiente natus, rem ratione laudantium distinctio enim alias optio sequi odio, quos praesentium est qui dolores quasi cupiditate vero?
+        </p>
+    </div>
+    <br>
+
+    <hr>
+
+    <div class="nav_box">
+        <ul class="f-l">
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>인스타그램</a></li>
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i>유튜브</a></li>
+            <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i>페이스북</a></li>
+        </ul>
+        <h1 class="logo"><a href="#">LOTTE CINEMA</a></h1>
+        <ul class="f-r">
+            <li><a href="#">멤버십</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">단체관람/대관문의</a></li>
+            <li><a href="#">로그인</a></li>
+        </ul>
+    </div>
+
+    <div class="image">
+        <img src="../images/img05.jpg" alt="사진">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima accusamus quos distinctio velit incidunt, maiores quae exercitationem. Sequi esse, nam ipsum cum quidem animi debitis. Praesentium blanditiis rem nemo? Dolores.</p>
+    </div>
+
+    <div class="image2">
+        <img src="../images/img05.jpg" alt="사진">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima accusamus quos distinctio velit incidunt, maiores quae exercitationem. Sequi esse, nam ipsum cum quidem animi debitis. Praesentium blanditiis rem nemo? Dolores.</p>
+    </div>
+</body>
+
+<script src="https://kit.fontawesome.com/0fe99cca5d.js" crossorigin="anonymous"></script>
+</html>

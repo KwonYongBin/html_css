@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaiong Style</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid silver;
+        }
+        .box:hover {
+            animation: changeColor 1s 0s 3; /* name, duration, delay, iteration-count */
+        }
+        @keyframes changeColor {
+            100% {background-color: aqua;} 
+            75% {background-color: tomato;}
+            50%  {background-color: violet;}
+            25%{background-color: tomato;}
+            0%{background-color: aqua;}
+        }
+        .box-img {
+            width: 600px; height: 300px;
+            background-image: url(../images/img01.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation: baximg 5s 0s 3;
+        }
+        @keyframes baximg {
+            from {background-image: url(../images/img02.jpg);}
+            30% {background-image: url(../images/img03.jpg);}
+            60% {background-image: url(../images/img04.jpg);}
+            to {background-image: url(../images/img05.jpg);}
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation Style</h1>
+    <div class="box"></div>
+    <div class="box-img"></div>
+</body>
+</html>
