@@ -20,6 +20,7 @@
     color: var(--color-maincol);
 }
 #header .header_wrapper .gnb ul li {
+    position: relative;
     display: inline-block;
     text-align: left;
 }
@@ -30,10 +31,24 @@
 
 }
 #header .header_wrapper .gnb ul li a {font-weight: 700;}
+#header .header_wrapper .gnb ul li::before {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    display: none;
+}
+#header .header_wrapper .gnb ul li:hover::before {
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
 #header .header_wrapper .gnb ul li a img {
     width: 70px;
     height: 70px;
-    transition: all 0.3s ease-in-out;
 }
 
 /* header_gnb */
@@ -53,7 +68,7 @@
     border-radius: 50%;
     text-align: center;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 35px;
     color: var(--color-white);
 }
 #header .header_wrapper .search > a:hover {background-color: #e03051;}
@@ -106,7 +121,7 @@
 
 /* main */
 main {
-    padding-top: 100px;
+    padding: 100px 0 50px 0;
 }
 section {
     overflow: hidden;
@@ -131,12 +146,27 @@ section div.wrapper ul li .guest {
     position: absolute;
     left: 0; top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 section div.wrapper ul li .guest div{
     display: flex;
     justify-content: space-between;
+}
+section div.wrapper ul li .guest div span{
+    display: inline-block;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+section div.wrapper ul li .guest div a i {
+    font-size: 24px;
+    color: #fff;
+}
+section div.wrapper ul li .guest div a i:hover {
+    font-size: 26px;
+    transition: all 0.1s ease-in-out;
 }
 section div.wrapper ul li div.img {
     width: 250px;
@@ -176,18 +206,113 @@ section div.wrapper ul li:nth-child(7) div.img {
     background: url(../img/f075297a_original.avif) no-repeat center center;
     background-size: cover;
 }
-section div.wrapper ul li a div.desc {
-
+section div.wrapper ul li div.desc {
+    color: #666;
 }
-section div.wrapper ul li a div.desc h3{
-
+section div.wrapper ul li div.desc h3{
+    font-size: 13px;
+    font-weight: 900;
+    color: #333;
 }
-section div.wrapper ul li a div.desc span{
+section div.wrapper ul li div.desc span{
     display: block;
+    font-size: 12px;
 }
-section div.wrapper ul li a div.desc strong{
+section div.wrapper ul li div.desc strong{
+    font-size: 12px;
     
 }
-section div.wrapper ul li a div.desc strong em{
-    
+section div.wrapper ul li div.desc strong em{
+    font-size: 10px;
 }
+section div.wrapper ul li div.desc strong em i{
+    font-size: 10px;
+}
+
+/* footer */
+#footer {
+    padding: 0 48px;
+    background-color: var(--color-subcol);
+}
+#footer h2 {
+    position: relative;
+    padding: 48px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+#footer h2::before {
+    position: absolute;
+    left: 0; bottom: 45px;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+#footer .footer_content {
+    border-bottom: 1px solid #ddd;
+}
+#footer .footer_content .footer_contbox {
+    display: flex;
+    justify-content: left;
+    padding: 24px 0 32px 0;
+}
+#footer .footer_content .footer_contbox div {
+    width: 33.333%;
+}
+#footer .footer_content .footer_contbox div h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+#footer .footer_content .footer_contbox div ul li {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: normal;
+}
+
+#footer .footer_content .footer_contbox div ul li a:hover {
+    text-decoration: underline;
+}
+
+#footer .footer_copy {
+    padding: 24px 0 32px 0;
+}
+#footer .footer_copy .copy_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd
+}
+#footer .footer_copy p {
+    font-size: 10px;
+    color: #888;
+}
+#footer .footer_copy .copy_box div ul li {
+    display: inline-block;
+    vertical-align: bottom;
+}
+#footer .footer_copy .copy_box div.copy_left ul li {
+    position: relative;
+    padding-right: 20px;
+}
+#footer .footer_copy .copy_box div.copy_left ul li::before {
+    content: '';
+    width: 2px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    right: 10px; top: 10px;
+}
+#footer .footer_copy .copy_box div.copy_left ul li:last-child {padding: 0;}
+#footer .footer_copy .copy_box div.copy_left ul li:last-child::before {
+    display: none;
+}
+#footer .footer_copy .copy_box .copy_right ul li a {
+    font-size: 16px;
+    font-weight: 600;
+}
+#footer .footer_copy .copy_box .copy_right ul li a i {
+    font-size: 16px;
+    display: inline-block;
+    padding-right: 10px;
+}
+#footer .footer_copy .copy_box .copy_right ul li:last-child a i {padding: 0;}
