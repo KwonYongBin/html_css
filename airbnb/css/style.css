@@ -16,14 +16,17 @@
     background-color: var(--color-subcol);
     box-sizing: border-box;
 }
-#header .header_wrapper .logo a {
-    color: var(--color-maincol);
-}
+
+/* header_logo */
+#header .header_wrapper h1 a {color: var(--color-maincol);}
+#header .header_wrapper .media_logo {display: none;}
 #header .header_wrapper .gnb ul li {
     position: relative;
     display: inline-block;
     text-align: left;
 }
+
+/* header_gnb */
 #header .header_wrapper .gnb ul li div{
     display: flex;
     align-items: center;
@@ -50,8 +53,6 @@
     width: 70px;
     height: 70px;
 }
-
-/* header_gnb */
 #header .header_wrapper .search {position: relative;}
 #header .header_wrapper .search ul {
     border: 1px solid #999;
