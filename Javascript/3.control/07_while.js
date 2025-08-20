@@ -14,8 +14,8 @@ while (i<=10) {
 }
 
 //메뉴 선택
-let menu = 2;
 let flag = true;
+let menu = 2;
 while (flag) {
     console.log(`0:🍎, 1:🍏, 2:🍋`);
     if(menu === 0){
