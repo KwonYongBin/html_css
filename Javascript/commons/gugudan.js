@@ -1,5 +1,6 @@
 /**
- *  싱글 구구단 - 단 하나를 파라미터로 입력받아 출력
+ * 싱글 구구단 - 단 하나를 파라미터로 입력받아 출력
+ *
  */
 export function singleGugudan(dan) {
     for(let i = 1; i <= 9; i++){
