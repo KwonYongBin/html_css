@@ -42,11 +42,11 @@ function loginCheck() {
         let user = new User(id.value, pass.value);
         user.display();
 
-        //아이디, 패스워드를 서버에 전송!!
+        //아이디, 패스워드를 서버에 전송!! : user 객체 전송
         const did = 'test';
         const dpass = '1234';
 
-        if(did === id.value && dpass === pass.value) {
+        if(did === user.getId() && dpass === user.getPass()) {
             alert('로그인 성공');
         } else {
             alert('로그인 실패');

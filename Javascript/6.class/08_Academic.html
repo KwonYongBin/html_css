@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./8_Academic.js"></script>
+    <script src="08_Academic.js"></script>
+    
     <style>
-        #student {  display: block;     }
-        #professor {  display: none;     }
-        #parent {  display: none;     }
-        #employee {  display: none;     }
+        #student {display: block;}
+        #professor {display: none;}
+        #parent {display: none;}
+        #employee {display: none;}
     </style>
+    
 </head>
 <body>
     <h1>Academic Signup</h1>
@@ -23,7 +25,7 @@
         </li>
     </ul>
     <!-- 학생 정보 -->
-    <ul id="student">
+    <ul id="student" class="user-info">
         <li>
             <label for="">학번</label>
             <input type="text" id="sno">
@@ -47,7 +49,7 @@
     </ul>
 
     <!-- 교수 정보 -->
-    <ul id="professor">
+    <ul id="professor" class="user-info">
         <li>
             <label for="">성명</label>
             <input type="text" id="name">
@@ -70,7 +72,7 @@
         </li>
     </ul>
     <!-- 학부모 정보 -->
-    <ul id="parent">
+    <ul id="parent" class="user-info">
         <li>
             <label for="">성명</label>
             <input type="text" id="name">
@@ -93,7 +95,7 @@
         </li>
     </ul>
     <!-- 직원 정보 -->
-    <ul id="employee">
+    <ul id="employee" class="user-info">
         <li>
             <label for="">성명</label>
             <input type="text" id="name">
