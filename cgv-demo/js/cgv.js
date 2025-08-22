@@ -1,91 +1,123 @@
-
+/**
+ * 로그인 처리 함수
+ */
 //로그인
 class Member {
     #id;
     #pwd;
-    constructor(id, pwd){
+    constructor(id, pwd) {
         this.#id = id;
         this.#pwd = pwd;
     }
 
     getId = () => this.#id;
     getPwd = () => this.#pwd;
-
-    setId = () => this.#id = id;
-    setPwd = () => this.#pwd = pwd;
-
-    display = () => console.log(this.#id, this.#pwd)
+    display = () => console.log(this.getId(), this.getPwd());
 
 }
 
-function loginCheck() {
-    const id = document.querySelector('#id');
-    const pwd = document.querySelector('#pwd');
+class JoinMember extends Member {
+    constructor (id, pwd, name, phone, emailname, emaildomain) {
+        super(id, pwd);
+        this.name = name;
+        this.phone = phone;
+        this.emailname = emailname;
+        this.emaildomain = emaildomain;
+    }
+    display = () => console.log(
+            this.getId,
+            this.getPwd,
+            this.name,
+            this.phone,
+            this.emailname,
+            this.emaildomain
+        );
+}
 
-    if(id.value === ''){
+/**
+ * 로그인 처리 함수
+ */
+function loginCheck() {
+    let id = document.querySelector("#id");
+    let pwd = document.querySelector("#pwd");
+    let member = null;
+
+    if(id.value === '') {
+        alert('아이디를 입력해주세요');
+        id.focus();
+    } else if(pwd.value === '') {
+        alert('패스워드를 입력해주세요');
+        pwd.focus();
+    } else {
+        // console.log(id.value, pwd.value);
+        member = new Member(id.value, pwd.value);
+        member.display();
+    }
+}
+
+/**
+ * 회원가입 처리 함수
+ */
+function joinCheck() {
+    let id = document.querySelector('#id');
+    let pwd = document.querySelector('#pwd');
+    let cpwd = document.querySelector('#cpwd');
+    let name = document.querySelector('#name');
+    let phone = document.querySelector('#phone');
+    let emailname = document.querySelector('#emailname');
+    let emaildomain = document.querySelector('#emaildomain');
+    let member = null;
+
+    if (id.value === '') {
 
         alert('아이디 입력바랍니다.')
         id.focus();
 
-    } else if(pwd.value === '') {
+    } else if (pwd.value === '') {
 
         alert('패스워드를 입력바랍니다.')
         pwd.focus();
+
+    } else if (cpwd.value === '') {
+
+        alert('패스워드확인을 입력바랍니다.')
+        cpwd.focus();
+
+    } else if (name.value === '') {
+
+        alert('이름을 입력바랍니다.')
+        name.focus();
+
+    } else if (phone.value === '') {
+
+        alert('휴대폰번호를 입력바랍니다.')
+        phone.focus();
+
+    } else if (emailname.value === '') {
+
+        alert('이메일을 입력바랍니다.')
+        emailname.focus();
+
+    } else if (emaildomain.value === 'default') {
+
+        alert('이메일 도메인을 선택해주세요')
+        emaildomain.focus();
+
     } else {
+        //서버 전송
+        // console.log(
+        //      id.value, pwd.value, cpwd.value, name.value,
+        //      phone.value,emailname.value, emaildomain.value
+        // );
+        member = new JoinMember(
+            id.value, 
+            pwd.value, 
+            name.value, 
+            phone.value, 
+            emailname.value, 
+            emaildomain.value
+        );
         
-        let member = new Member(id.value, pwd.value);
         member.display();
-
-        //ID, Password server 전송 : member 객체 전송
-        const sid = 'hong';
-        const spwd = '1234';
-
-        if(sid === member.getId() && spwd === member.getPwd()) {
-            alert('로그인 성공')
-        } else {
-            alert('로그인 실패')
-            id.value = '';
-            pwd.value = '';
-            id.focus();
-        }
     }
-}
-
-// 회원가입
-class Join {
-    #id;
-    #pass;
-    #passc;
-    #name;
-    #phone;
-    #email;
-    constructor(id, pass, passc, name, phone, email) {
-        this.#id = id;
-        this.#pass = pass;
-        this.#passc = passc;
-        this.#name = name;
-        this.#phone = phone;
-        this.#email = email;
-
-    }
-
-    getId = () => this.#id;
-    getPass = () => this.#pass;
-    getPassc = () => this.#passc;
-    getName = () => this.#name;
-    getPhone = () => this.#phone;
-    getEmail = () => this.#email;
-
-    setId = () => this.#id = id;
-    setPass = () => this.#pass = pass;
-    setPassc = () => this.#passc = passc;
-    setName = () => this.#name = name;
-    setPhone = () => this.#phone = phone;
-    setEmail = () => this.#email = email;
-
-    display = () => console.log(this.#id, this.#pass, this.#passc, this.#name, this.#phone, this.#email);
-}
-
-function joinCheck() {
-
 }
