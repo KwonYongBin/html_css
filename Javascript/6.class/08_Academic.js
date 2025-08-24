@@ -175,7 +175,7 @@ function display(type) {
     // 아래에서 e는 element를 의미함
     const userInfos = document.querySelectorAll('.user-info');
     userInfos.forEach(e => {
-        e.style.display = 'none';
+        e.style.display = 'none'; //위의 로직을 줄임.
     })
 
     if (type === '1') {
