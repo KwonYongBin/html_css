@@ -171,6 +171,16 @@ function display(type) {
     // document.querySelector('#parent').style.display = "none";
     // document.querySelector('#employee').style.display = "none";
 
+    // if (type === '1') {
+    //     document.querySelector('#student').style.display = "block";
+    // } else if (type === '2') {
+    //     document.querySelector('#professor').style.display = "block";
+    // } else if (type === '3') {
+    //     document.querySelector('#parent').style.display = "block";
+    // } else if (type === '4') {
+    //     document.querySelector('#employee').style.display = "block";
+    // }
+
     //위의 querySelector을 querySelectorAll을 이용하여 코드를 줄임.
     // 아래에서 e는 element를 의미함
     const userInfos = document.querySelectorAll('.user-info');
@@ -178,14 +188,16 @@ function display(type) {
         e.style.display = 'none';
     })
 
-    if (type === '1') {
-        document.querySelector('#student').style.display = "block";
-    } else if (type === '2') {
-        document.querySelector('#professor').style.display = "block";
-    } else if (type === '3') {
-        document.querySelector('#parent').style.display = "block";
-    } else if (type === '4') {
-        document.querySelector('#employee').style.display = "block";
+    const ids = {
+        '1' : 'student',
+        '2' : 'professor',
+        '3' : 'parent',
+        '4' : 'employee'
+    };
+
+    const targetId = ids[type];
+    if (targetId) {
+        document.querySelector(`#${targetId}`).style.display = 'block';
     }
 
 }
