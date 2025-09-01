@@ -2,7 +2,7 @@
  * 비교 연산자 >, <, >=, <=, ==(값 비교), ===(값,데이터타입)
  */
 console.log(3 > 2);       //true
-console.log(3 < 2);       //flase
+console.log(3 < 2);       //false
 console.log(3 >= 2);      //true
 console.log(3 <= 2);      //false
 console.log(3 == '3');    //true
