@@ -32,4 +32,18 @@ let [a, b, c] = getObject2();
 console.log(name, address, job);
 console.log(a, b, c);
 
+//textList를 입력받아, 3글자 이상의 text이면 새로운 배열 객체를 생성하여 반환
+function textFilter(array) {
+    //filter 메소드는 true인 경우에만 요소를 반환
+    return array.filter((text) => text.length >= 3);
+}
+//textList를 입력받아, 3글자 이하의 text이면 새로운 배열 객체를 생성하여 반환
+function textFilter2(array) {
+    //filter 메소드는 false인 경우에만 요소를 반환
+    return array.filter((text) => !(text.length >= 3));
+}
 
+let result = textFilter(['javascript', 'java', 'css', 'ab', 'html']);
+let result22 = textFilter2(['javascript', 'java', 'css', 'ab', 'html']);
+console.log(result);
+console.log(result22);
