@@ -18,7 +18,7 @@
 function a() {
     b();
     setTimeout(() => {
-        console.log(`바로 Task Queue!!!`); //비동기 처리의 이유로 background에 저장된 후 동기처리가 완료된 후에 실행되어서 가장 마시막에 출력
+        console.log(`바로 Task Queue!!!`);
         
     });
     console.log(`-----------------> a`);
