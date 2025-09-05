@@ -17,7 +17,8 @@ function createSwiper() {
         // auto play
         autoplay: {
             delay: 3000,
-            disableOnInteraction: true,
+            disableOnInteraction: false, //사용자가 슬라이드를 직접 사용 후 자동 슬라이드 정지/진행 설정
+            pauseOnMouseEnter:true, //마우스가 슬라이더 위로 올라가면 슬라이드 중지
         },
 
         // Navigation arrows

@@ -1,0 +1,19 @@
+        .swiper {
+            width: 30%;
+            height: 60vh;
+            border: 1px solid gray;
+        }
+
+        .swiper-scrollbar {
+            display: none;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+        }
