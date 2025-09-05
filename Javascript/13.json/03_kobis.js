@@ -22,7 +22,7 @@ async function searchMoviePoster(movieNm, openDt) {
 async function showAPI(sdate) {
     //kobis key = 1387ed83604df30a0c5d9dfdea0cba00 / 2c0579b0529bc5042a8b0c5b3149b18b
     //kobis api연동
-    let key = "2c0579b0529bc5042a8b0c5b3149b18b";
+    let key = "2ee1e9537e81b13a4bc1c878e25be1b4";
     // let sdate = "20250903";
     let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/`
     url += `searchDailyBoxOfficeList.json?key=${key}&targetDt=${sdate}`;
