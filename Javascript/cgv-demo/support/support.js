@@ -103,4 +103,3 @@ async function createTable(type, list) {
     document.querySelector(".stable")?.remove();
     document.querySelector("#before_table").insertAdjacentHTML('afterend', output);
 }
-

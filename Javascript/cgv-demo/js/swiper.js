@@ -31,13 +31,13 @@ async function getAPI(sdate) {
     url += `searchDailyBoxOfficeList.json?key=${key}&targetDt=${sdate}`;
     let response = await fetch(url);
     return response.json();
-    
+
 }
 
 function createSdate() {
     let today = new Date;
     let year = today.getFullYear();
-    let month =  today.getMonth() + 1;
+    let month = today.getMonth() + 1;
     let day = today.getDate() - 1;
     month = month < 10 ? '0' + month : month;
     day = day < 10 ? '0' + day : day;
@@ -51,8 +51,8 @@ async function createSwiper() {
     let kobis = await getAPI(sdate);
     let kobisList = kobis.boxOfficeResult.dailyBoxOfficeList;
     let posterList = [];
-    
-    for(const movie of kobisList){
+
+    for (const movie of kobisList) {
         let poster = await searchMoviePoster(movie.movieNm, movie.openDt);
         posterList.push(poster);
     };
@@ -61,24 +61,19 @@ async function createSwiper() {
     // kobisList.forEach((movie)=>{
     //    let poster = await searchMoviePoster(movie.movieNm, movie.openDt);
     // });
-    
+
     let output =
-    `
+        `
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                ${
-                    posterList.map((posterUrl)=>
-                        `
+                ${posterList.map((posterUrl) =>`
                         <div class="swiper-slide">
                             <img src="${posterUrl}" alt="poster">
                         </div>
-
-                        `
-                    ).join("")
-                }
-            </div>
+                    `).join("")}
+        </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
 
