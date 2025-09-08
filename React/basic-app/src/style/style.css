@@ -1,0 +1,11 @@
+h1 {
+    color: coral;
+}
+h3 {
+    background-color: cyan;
+}
+button {
+    background-color: yellow;
+    display: block;
+    margin: 20px 0;
+}

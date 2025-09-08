@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style/style.css"
 
-function App() {
+import { MyTitle, MyTitle3 } from "./components/MyTitle.jsx"
+import MyButton from './components/MyButton.jsx';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          아무거나
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //여러개를 컴포넌트 해야하는 경우 그루핑은 필수이다.
+    <> 
+      <MyTitle />
+      <MyTitle3 />
+      <MyButton name="회원가입"/>
+      <MyButton name="아이디 찾기"/>
+      <MyButton name="비밀번호 찾기"/>
+    </>
+  )
 }
 
 export default App;
