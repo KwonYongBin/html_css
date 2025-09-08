@@ -4,8 +4,29 @@ h1 {
 h3 {
     background-color: cyan;
 }
+.menu {
+    text-decoration: none;
+    padding: 5px 20px;
+}
 button {
-    background-color: yellow;
+    width: 250px;
+    height: 50px;
     display: block;
-    margin: 20px 0;
+}
+.button {
+
+    background-color: bisque;
+}
+.submit {
+    background-color: blue;
+}
+.reset {
+    background-color: blueviolet;
+}
+li.menu_list {
+    list-style: none;
+}
+.menu_list a{
+    padding: 0;
+    margin: 0;
 }
