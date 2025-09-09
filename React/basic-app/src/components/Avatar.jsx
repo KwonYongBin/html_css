@@ -13,12 +13,11 @@ export default Avatar ;
 
 export const AvatarList = ({list, className}) => {
   return (
-    <div className={className}>
-        {list.map((item, i)=>{
-          
-            <Avatar img={item.img} name={item.name}/>
-        })}
-    </div>
+    <>
+        <div className={className}>
+            { list.map((item, i) => <Avatar key={i} img={item.img} name={item.name}/> )}
+        </div>
+    </>
   )
 }
 
