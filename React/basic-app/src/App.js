@@ -5,6 +5,7 @@ import MyButton from './components/MyButton.jsx';
 import Menu from "./components/Menu.jsx";
 import Menu2 from "./components/Menu2.jsx";
 import MenuList from "./components/MenuList.jsx";
+import AvatarImage from "./components/AvatarImage.jsx";
 
 
 const App = () => {
@@ -24,14 +25,14 @@ const App = () => {
   },
   {
     "title": "구글",
-    "color": "blue",
-    "bg": "ywllowgreen",
+    "color": "tomato",
+    "bg": "blue",
     "href": "https://www.google.com"
   },
   {
     "title": "다음",
-    "color": "red",
-    "bg": "cyon",
+    "color": "yellow",
+    "bg": "red",
     "href": "https://www.daum.net"
   },
     {
@@ -42,14 +43,14 @@ const App = () => {
   },
   {
     "title": "구글",
-    "color": "blue",
-    "bg": "ywllowgreen",
+    "color": "tomato",
+    "bg": "blue",
     "href": "https://www.google.com"
   },
   {
     "title": "다음",
-    "color": "red",
-    "bg": "cyon",
+    "color": "yellow",
+    "bg": "red",
     "href": "https://www.daum.net"
   }
 ]
@@ -66,6 +67,10 @@ const App = () => {
       <Menu title={menu1.title} color={menu1.color} bg={menu1.bg} href={menu1.href} />
       <Menu2 data={menu1} />
       <MenuList menus={menus} />
+      <hr />
+      <AvatarImage img="/images/people1.webp"/>
+      <AvatarImage img="/images/people2.webp"/>
+      <AvatarImage img="/images/people3.webp"/>
     </>
   );
 }

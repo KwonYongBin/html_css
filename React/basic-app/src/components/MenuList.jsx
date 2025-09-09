@@ -6,11 +6,11 @@ const MenuList = ({menus}) => {
     <ul>
         {menus.map((menu)=>
             <li className='menu_list'>
-                    <Menu 
-                    title={menu.title} 
-                    color={menu.color} 
-                    bg={menu.bg} 
-                    href={menu.href}
+                    <Menu
+                      title={menu.title} 
+                      color={menu.color} 
+                      bg={menu.bg} 
+                      href={menu.href}
                     />
             </li>
         )}

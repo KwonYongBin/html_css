@@ -15,4 +15,41 @@
 ## 3. React의 단점
 - 방대한 학습량 : Html, Css, JavaScript, SCSS, SASS 등을 학습하여야 효율적이다.
 - 상태 관리 복잡성 : React Hooks를 통한 상태 관리, 비동기식 처리
-- 
+
+## 4. React 프로젝트 생성
+- 리액트 사이트 : https://reactjs.org ---> https://react.dev
+- CSR (Client-Side Rendering)
+- SPA (Single Page Apps)
+- SSG (Static-Site Generation)
+- SSR (Sever-Side Rendering)
+- 프로젝트 생성 : 리액트 프로젝트 or NEXT.JS 프레임 워크 : 리액트 프로젝트 + SSR
+- React 프로젝트 생성
+- 형식 : npx create-react-app@lastest [프로젝트명]
+- <예> npx create-react-app@5.1.0 basic-app
+- 프로젝트 실행 : cd basic-app -> npm start
+
+npm run build, npm test, npm run eject
+
+## 5. React App 실행 순서
+- npm start > src/index.js : 출력되는 App 선택 > App.js - SSG(Html 미리 생성)
+ -> React DOM(Virtual Dom) -> 브라우저 DOM
+
+ cat package.json cmd에 바로 확인 하는 명령어
+
+ ## 6. 컴포넌트(Component)
+ - UI를 구성하는 함수 컴포넌트
+ - 첫 글자는 대문자로 정의
+ - return 키워드 다음은 반드시 ()묶어준다.
+ - return 코드는 하나로 그룹핑되어 반환된다.
+    예 <div> ~ </div>, <>~</>...
+ - 로직을 포함하는 코드는 {}로 묶어준다.
+ - return () 에서 사용되는 문법을 JSX (JavaScript Extension)이다
+ - 자동완성 명령 - rface
+
+## 7. 프롭스(Props)
+- 부모 컴포넌트가 자식 컴포넌트에게 데이터를 전달하는 방식
+- 전달하는 객체는 Object Literal({property:valye...}) 타입
+- 자식은 참조객체변수 혹은 구조분해 할당 형식으로 데이터를 매핑
+- porps는 읽기 전용 객체로 자식이 수정할 수 없음
+- 부모 --> 자식 : 단방향 작업만 가능(One-way data flow)
+- 부모 <-- 자식 : 이벤트 콜백함수 형태로 전달함
