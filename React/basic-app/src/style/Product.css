@@ -1,0 +1,14 @@
+.best-product-img {
+    border: 1px solid blue;
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+span.no {
+    padding: 10px 15px;
+    position: absolute;
+    left: 0; top: 0;
+    color: #fff;
+    background-color: #000;
+    font-size: 14px;
+}
