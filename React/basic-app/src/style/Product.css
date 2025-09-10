@@ -1,11 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    padding: 50px;
+    font-size: 2.5rem;
 }
 .best-product-img {
     position: relative;
-    width: 200px;
-    height: 300px;
 }
 .best-product-img-no {
     padding: 10px 15px;
@@ -18,6 +23,7 @@
 .best-product-img-like {
     position: absolute;
     right: 5px; bottom: 5px;
+    cursor: pointer;
 }
 .best-product-content {
     position: relative;
@@ -46,12 +52,16 @@
     top: 0;
     right: 0;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .best-product {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    width: 1450px;
 }
 .best-product li:first-child {
     grid-row: span 2;
