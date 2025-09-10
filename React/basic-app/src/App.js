@@ -1,4 +1,4 @@
-import "./style/style.css"
+import "./style/Style.css"
 
 import { MyTitle, MyTitle3 } from "./components/MyTitle.jsx"
 import MyButton from './components/MyButton.jsx';
