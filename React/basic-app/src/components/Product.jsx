@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 /**
  * 베스트 상품 컴포넌트
  */
@@ -17,10 +16,15 @@ export const BestProduct = () => {
         //     .then(response => response.json())
         //     .then(jsonData => setbestProductList(jsonData))
         //     .catch(error=> console.log(error));
-        const response = fetch("/data/best_product.json");
-        const jsonData = response.json();
-        setbestProductList(jsonData);
-    }, [])
+        
+        const fetchDataa = async () => {
+            const response = await fetch("/data/best_product.json");
+            const jsonData = await response.json();
+            setbestProductList(jsonData);
+        }
+        fetchDataa();
+
+    }, []);
 
     return (
         <>
