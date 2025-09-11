@@ -1,5 +1,5 @@
 import React from 'react'
-import {BestProduct } from './components/Product.jsx';
+import {BestProduct } from './components/BestProduct.jsx';
 import './style/Product.css';
 
 const App = () => {

@@ -9,4 +9,4 @@ const Icon = ({value, bg, color, radius, width, height}) => {
   )
 }
 
-export default Icon
+export default Icon;
