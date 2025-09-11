@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BestProductImage from "./shared/BestProductImage";
 /**
  * 베스트 상품 컴포넌트
  */
@@ -95,36 +96,3 @@ export const BestProductContent = ({title, sale, price, like}) => {
     )
 }
 
-/**
- * 베스트 상품 이미지 컴포넌트
- */
-
-export const BestProductImage = ({img, style, rank, like, cartCount}) => {
-    const handleAddCart = () => {
-        cartCount();
-    }
-    return (
-        <div className="best-product-img">
-            <ProductImage img={img} style={style} /> 
-            <span className="best-product-img-no">{rank}</span>
-            {like ? <span className="best-product-img-like" onClick={handleAddCart}>🛒</span> : ""}
-        </div>
-    )
-}
-
-/**
- * 상품 이미지 컴포넌트
- */
-const ProductImage = ({ img, style }) => {
-    const { width, height } = style;
-    return (
-        <div>
-            <img
-                src={img}
-                style={{ width: width, height: height }}
-            />
-        </div>
-    )
-}
-
-export default ProductImage;

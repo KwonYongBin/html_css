@@ -13,12 +13,15 @@ h2 {
     position: relative;
 }
 .best-product-img-no {
-    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
     position: absolute;
     left: 0; top: 0;
-    color: #fff;
-    background-color: #000;
     font-size: 14px;
+    /* padding: 10px 15px; */
+    /* color: #fff;
+    background-color: #000; */
 }
 .best-product-img-like {
     position: absolute;
