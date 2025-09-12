@@ -1,3 +1,15 @@
+.menu-list-item-border {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background-color: aqua;
+}
+.menu-list-item {
+    position: relative;
+}
 .menu-list {
     display: flex;
     list-style-type: none;
