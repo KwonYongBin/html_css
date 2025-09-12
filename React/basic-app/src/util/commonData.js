@@ -1,13 +1,4 @@
 /**
- * 데이터 처리 공통 모듈
- */
-export default async function fetchDataa(url) {
-    const response = await fetch(url);
-    const jsonData = await response.json();
-    return jsonData;
-}
-
-/**
  * KMDB 영화 포스터 검색
  */
 export async function searchMoviePoster(movieNm, openDt) {
@@ -19,18 +10,28 @@ export async function searchMoviePoster(movieNm, openDt) {
 
     const result = await fetch(url);
     const jsonData = await result.json();
-
+    
     return jsonData.Data[0].Result[0].posters.split("|")[0];
 }
 
 /**
- * Kobis 영화 일별 오피스
+ * KOBIS 영화 일별 박스 오피스
  */
 export async function fetchKobisAPI(sdate) {
-    let key = "2ee1e9537e81b13a4bc1c878e25be1b4";
+    let key = "6206e4e96646c240ac59f09bc0164ff9";
     let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/`
     url += `searchDailyBoxOfficeList.json?key=${key}&targetDt=${sdate}`;
+    
     let response = await fetch(url);
+    
+    return response.json();    
+}
 
-    return response.json();
+/**
+ * 데이터 처리 공통 모듈
+ */
+export async function fetchData(url) {
+    const response = await fetch(url);
+    const jsonData = await response.json();
+    return jsonData;
 }

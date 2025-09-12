@@ -1,13 +1,11 @@
-import React from 'react'
-import {BestProduct } from './components/BestProduct.jsx';
-import './style/Product.css';
+import { BestProduct } from "./components/BestProduct.jsx";
+import './css/Product.css';
 
-const App = () => {
-  return (
-    <>
-        <BestProduct />
-    </>
-  )
+export default function App() {
+
+    return (
+        <>
+            <BestProduct />
+        </>
+    );
 }
-
-export default App;

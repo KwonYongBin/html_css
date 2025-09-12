@@ -1,21 +1,19 @@
-import React from 'react'
-import Menu  from "../components/Menu.jsx"
+import { Menu } from './Menu.jsx';
 
-const MenuList = ({menus}) => {
-  return (
-    <ul>
-        {menus.map((menu)=>
-            <li className='menu_list'>
-                    <Menu
-                      title={menu.title} 
-                      color={menu.color} 
-                      bg={menu.bg} 
-                      href={menu.href}
-                    />
+/**
+ * 메뉴 리스트
+ */
+export function MenuList({menus}) {  //menus=[{menus}]
+    return (
+        <ul className="menu-list">
+            { menus.map((menu)=>                 
+            <li>
+                <Menu   title={menu.title} 
+                        color={menu.color} 
+                        bg={menu.bg} 
+                        href={menu.href} />
             </li>
-        )}
-    </ul>
-  );
+            ) }
+        </ul>
+    );
 }
-
-export default MenuList;

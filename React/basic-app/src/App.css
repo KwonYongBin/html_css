@@ -1,0 +1,61 @@
+/** value값에 따옴표 삭제 */
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  /* gap: 5px;  */
+}
+
+.menu {
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+.button {
+  width: 150px;
+  height:50px;
+  background-color: aqua;
+  color: red;
+}
+.submit {
+  width: 200px;
+  height:50px;
+  background-color: yellow;
+  color: red;
+}
+.reset {
+  width: 250px;
+  height:50px;
+  background-color: green;
+  color: red;
+}
+
+
+.title {
+  color: coral
+}
+.title3{
+  background-color: aquamarine;
+}
+.mybutton {
+  background-color: yellow;
+}
+
+.number {
+  font-size: 50px;
+  padding: 10px;
+}
+.total-number {
+  font-size: 50px;
+  font-weight: bold;
+  padding: 10px;
+}
+.counter-container {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}

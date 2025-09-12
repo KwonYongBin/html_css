@@ -1,35 +1,29 @@
-import Menu from '../commons/Menu'
-import { useEffect, useState } from 'react';
-import fetchData  from '../../util/commonData.js'
+import { Menu } from "../commons/Menu.jsx";
+import { useState, useEffect } from 'react';
+import { fetchData } from '../../util/commonData.js';
 
-export const HeaderLeft = () => {
+export function HeaderLeft() {
+    const [menus, setMenus] = useState([]);
 
-    const[menus, setMenus] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         const fetch = async() => {
-            const data = await fetchData("/data/menus.json")
-            setMenus(data.HeaderLeft)
+            const data = await fetchData("/data/menus.json");
+            setMenus(data.headerLeft);
         }
         fetch();
-    }, [])
+    }, []);
 
-  return (
-        <ul>
-            {
-                menus.map((menus) => {
-                    <li>
-                        <Menu
-                            href={menus.href}
-                            name={menus.name} 
-                            style={menus.style} 
-                            isIcon={menus.isIcon}
-                            icon={menus.icon} 
-                        />
-                    </li>
-                })
-            }
+    return (
+        <ul className="menu-list">
+            {menus.map(menu => 
+                <li>
+                    <Menu href={menu.href}
+                        name={menu.name}
+                        style={menu.style}
+                        isIcon={menu.isIcon}
+                        icon={menu.icon}  />
+                </li>
+            )}
         </ul>
-  )
+    );
 }
-
-export default HeaderLeft

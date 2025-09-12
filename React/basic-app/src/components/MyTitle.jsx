@@ -1,20 +1,15 @@
-import React from 'react'
 
-const MyTitle = () => {
-  return (
-    <>
-        <h1 className='App'>Hello~ React App!!!</h1>
-    </>
-  )
+// import '../App.css';
+
+export function MyTitle() {
+    return (
+        // <h1 style={{color: "coral"}}>Hello~ React App!!!</h1>
+        <h1 className="title">Hello~ React App!!!</h1>
+    );
 }
 
-const MyTitle3 = () => {
-  return (
-    <>
-        <h3 className='App'>Hello~ React App!!!</h3>
-    </>
-  )
+export function MyTitle3() {
+    return (
+       <h3 className="title3">Hello~ React App!!!</h3> 
+    );
 }
-
-
-export {MyTitle, MyTitle3}
