@@ -1,285 +1,310 @@
 {
     "headerLeft" : [
-        {
-            "href": "#",
-            "name": "인스타그램",
-            "style": {
-                "w": "100px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": true,
-            "icon": "❤"
+    {
+        "href": "#",
+        "name": "인스타그램",
+        "style": {
+            "w": "80px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
         },
-        {
-            "href": "#",
-            "name": "유투브",
-            "style": {
-                "w": "100px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": true,
-            "icon": "🚓"
+        "isIcon": true,
+        "icon": "🎬"
+    },
+    {
+        "href": "#",
+        "name": "유투브",
+        "style": {
+            "w": "80px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
         },
-        {
-            "href": "#",
-            "name": "페이스북",
-            "style": {
-                "w": "100px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": true,
-            "icon": "🍳"
-        }
+        "isIcon": true,
+        "icon": "🔊"
+    },
+    {
+        "href": "#",
+        "name": "페이스북",
+        "style": {
+            "w": "80px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
+        },
+        "isIcon": true,
+        "icon": "🎥"
+    }
     ],
     "headerRight" : [
-        {
-            "href": "#",
-            "name": "멤버쉽",
-            "style": {
-                "w": "80px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": false,
-            "icon": ""
+    {
+        "href": "#",
+        "name": "멤버십",
+        "style": {
+            "w": "80px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
         },
-        {
-            "href": "#",
-            "name": "고객센터",
-            "style": {
-                "w": "80px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": false,
-            "icon": ""
+        "isIcon": false,
+        "icon": ""
+    },
+    {
+        "href": "#",
+        "name": "고객센터",
+        "style": {
+            "w": "80px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
         },
-        {
-            "href": "#",
-            "name": "단체관람/대관문의",
-            "style": {
-                "w": "125px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": false,
-            "icon": ""
+        "isIcon": false,
+        "icon": ""
+    },
+    {
+        "href": "#",
+        "name": "단체관람/대관문의",
+        "style": {
+            "w": "120px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
         },
-        {
-            "href": "#",
-            "name": "로그인",
-            "style": {
-                "w": "80px",
-                "h": "30px",
-                "bg": "#fff",
-                "color": "#999"
-            },
-            "isIcon": false,
-            "icon": ""
-        }
-    ],
+        "isIcon": false,
+        "icon": ""
+    },
+    {
+        "href": "#",
+        "name": "로그인",
+        "style": {
+            "w": "80px",
+            "h": "30px",
+            "bg": "#fff",
+            "color": "#999",
+            "fs": "0.8rem"
+        },
+        "isIcon": false,
+        "icon": ""
+    }],
     "headerCenter" : [
-        {
-            "href": "#",
-            "name": "예매",
-            "style": {
-                "w": "160px",
-                "h": "50px",
-                "bg": "#000",
-                "color": "#fff",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+    {
+        "href": "#",
+        "name": "예매",
+        "style": {
+            "w": "160px",
+            "h": "50px",
+            "bg": "#000",
+            "color": "#fff",
+            "fs": "0.9rem"
         },
-        {
-            "href": "#",
-            "name": "영화",
-            "style": {
-                "w": "160px",
-                "h": "50px",
-                "bg": "#000",
-                "color": "#fff",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    }, 
+    {
+        "href": "#",
+        "name": "영화",
+        "style": {
+            "w": "160px",
+            "h": "50px",
+            "bg": "#000",
+            "color": "#fff",
+            "fs": "0.9rem"
         },
-        {
-            "href": "#",
-            "name": "영화관",
-            "style": {
-                "w": "160px",
-                "h": "50px",
-                "bg": "#000",
-                "color": "#fff",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    }, 
+    {
+        "href": "#",
+        "name": "영화관",
+        "style": {
+            "w": "160px",
+            "h": "50px",
+            "bg": "#000",
+            "color": "#fff",
+            "fs": "0.9rem"
         },
-        {
-            "href": "#",
-            "name": "이벤트",
-            "style": {
-                "w": "160px",
-                "h": "50px",
-                "bg": "#000",
-                "color": "#fff",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    }, 
+    {
+        "href": "#",
+        "name": "이벤트",
+        "style": {
+            "w": "160px",
+            "h": "50px",
+            "bg": "#000",
+            "color": "#fff",
+            "fs": "0.9rem"
         },
-        {
-            "href": "#",
-            "name": "스토어",
-            "style": {
-                "w": "160px",
-                "h": "50px",
-                "bg": "#000",
-                "color": "#fff",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": false
-        }
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    }, 
+    {
+        "href": "#",
+        "name": "스토어",
+        "style": {
+            "w": "160px",
+            "h": "50px",
+            "bg": "#000",
+            "color": "#fff",
+            "fs": "0.9rem"
+        },
+        "isIcon": false,
+        "icon": "",
+        "isBorder": false
+    } 
     ],
     "footerTop" : [
-        {
-            "href": "#",
-            "name": "회사소개",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+    {
+        "href": "#",
+        "name": "회사소개",
+        "style": {
+            "w": "100px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "이용약관",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "이용약관",
+        "style": {
+            "w": "100px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "개인정보처리방침",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "개인정보처리방침",
+        "style": {
+            "w": "120px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "이메일무단수집거부",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "이메일무단 수집거부",
+        "style": {
+            "w": "120px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "고정형영상정보처리기기 운영 및 관리방침",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem",
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "고정형 영상정보처리기기 운영 및 관리방침",
+        "style": {
+            "w": "250px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "L.POINT회원안내",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "L.POINT회원안내",
+        "style": {
+            "w": "120px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "배정기준",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "배정기준",
+        "style": {
+            "w": "100px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "채용안내",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "채용안내",
+        "style": {
+            "w": "100px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "광고/임대문의",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": true
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "광고/임대문의",
+        "style": {
+            "w": "100px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
         },
-        {
-            "href": "#",
-            "name": "사회적책임",
-            "style": {
-                "bg": "#fff",
-                "color": "#000",
-                "fs" : "0.9rem"
-            },
-            "isIcon": false,
-            "icon": "",
-            "isBorder": false
-        }
-
-    ]
+        "isIcon": false,
+        "icon": "",
+        "isBorder": true
+    },
+    {
+        "href": "#",
+        "name": "사회적책임",
+        "style": {
+            "w": "100px",
+            "h": "20px",
+            "bg": "#fff",
+            "color": "#777",
+            "fs": "0.7rem"
+        },
+        "isIcon": false,
+        "icon": "",
+        "isBorder": false
+    }
+    ] 
 }

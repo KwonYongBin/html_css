@@ -1,43 +1,24 @@
 import React, { useState, useRef, useMemo } from 'react';
-import validateFormCheck from '../util/validata.js';
-import initForm from '../util/init.js';
+import { validateFormCheck } from '../../util/validate.js';
+import { initForm } from '../../util/init.js';
 import './cgvSignup.css';
 
-export default function Signup() { 
-
-    const initArray = ['id', 'pwd', 'cpwd', 'name', 'phone', 'emailName', 'emailDomain']
-    // const initForm = initArray.reduce((acc, cur) => { //reduce(비동기)함수 호출
-    //     acc[cur]='';
-    //     return acc;
+export function Signup() { 
+    const initArray = ['id', 'pwd', 'cpwd', 'name', 'phone', 'emailName', 'emailDomain'];
+    // const initForm = initArray.reduce((acc,cur) => {  //비동기
+    //         acc[cur] = "";
+    //         return acc;
     // }, {});
 
-    const refs = useMemo(()=>{
-        return initArray.reduce((acc, cur) => {
-            acc[`${cur}Ref`] = React.createRef();
+    const refs = useMemo(() => {  //Hooks 비동기식 처리 진행
+        return initArray.reduce((acc,cur) => {
+            acc[`${cur}Ref`] = React.createRef();         
             return acc;
         }, {});
-    })
+    });   
 
-    // const refs = {
-    //     idRef: useRef(null),
-    //     pwdRef: useRef(null),
-    //     cpwdRef: useRef(null),
-    //     nameRef: useRef(null),
-    //     phoneRef: useRef(null),
-    //     emailNameRef: useRef(null),
-    //     emailDomainRef: useRef(null),
-    // };
-    // const initForm = {
-    //     id: "", 
-    //     pwd: "",
-    //     cpwd: "",
-    //     name: "",
-    //     phone: "",
-    //     emailName: "",
-    //     emailDomain: "default"
-    // };
     const [form, setForm] = useState(initForm(initArray));
-    const [errors, setErrors] = useState({...initForm, emailDomain: ""});
+    const [errors, setErrors] = useState({...initForm(initArray), emailDomain: ""});
 
     const handleChangeForm = (e) => {
         const { name, value } = e.target;
@@ -51,17 +32,15 @@ export default function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if(validateFormCheck(refs, setErrors)) {
+        const param = {  refs: refs,   setErrors: setErrors }
+        if(validateFormCheck(param)) {
             console.log("submit-->", form);            
         }
     }    
 
-    console.log(form);
-    
-
     return (
     <div className="content">
+        
         <div className="join-form center-layout">
             <h1 className="center-title">회원가입(React)</h1>
             <form onSubmit={handleSubmit}>
@@ -83,7 +62,6 @@ export default function Signup() {
                     </li>
                     <li>
                         <label for=""><b>비밀번호</b></label>
-                        <span style={{color:"red", fontSize:"0.8rem"}}>{errors.pwd}</span>
                         <div>
                             <input type="password" 
                                     name="pwd"
@@ -95,7 +73,6 @@ export default function Signup() {
                     </li>
                     <li>
                         <label for=""><b>비밀번호 확인</b></label>
-                        <span style={{color:"red", fontSize:"0.8rem"}}>{errors.cpwd}</span>
                         <div>
                             <input type="password" 
                                     name="cpwd"
@@ -107,7 +84,6 @@ export default function Signup() {
                     </li>
                     <li>
                         <label for=""><b>이름</b></label>
-                        <span style={{color:"red", fontSize:"0.8rem"}}>{errors.name}</span>
                         <div>
                             <input type="text" 
                                     name="name"
@@ -119,7 +95,6 @@ export default function Signup() {
                     </li>
                     <li>
                         <label for=""><b>전화번호</b></label>
-                        <span style={{color:"red", fontSize:"0.8rem"}}>{errors.phone}</span>
                         <div>
                             <input type="text" 
                                     name="phone"
@@ -163,3 +138,4 @@ export default function Signup() {
     </div>
     );
 }
+
