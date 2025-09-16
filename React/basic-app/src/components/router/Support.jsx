@@ -1,7 +1,10 @@
-export function Support(){
+
+
+export function Support() {
     return (
         <>
-            <h1>Support</h1>    
+            <h1>Support</h1>
         </>
-    )
+    );
+
 }

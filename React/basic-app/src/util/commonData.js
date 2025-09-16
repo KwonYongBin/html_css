@@ -11,7 +11,6 @@ export async function searchMoviePoster(movieNm, openDt) {
     const result = await fetch(url);
     const jsonData = await result.json();
     
-
     return jsonData.Data[0].Result[0].posters.split("|")[0];
 }
 
