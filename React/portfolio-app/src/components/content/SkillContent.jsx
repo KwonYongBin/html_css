@@ -1,6 +1,17 @@
+import { List } from "../base/List.jsx";
 import { Article, SkillTitle, CodingSkill } from "./Article.jsx";
 
 export function SkillContent() {
+    const tools = [
+        "Visual Studio Code",
+        "IntelliJ",
+        "Android Studio",
+        "Eclipse",
+        "MySQL Workbench"
+    ];
+    const etc = [
+        "Git", "Scrum Master", "SVN"
+    ];
     return (
         <div className="skills">
             <Article style="skills-coding">
@@ -10,22 +21,12 @@ export function SkillContent() {
 
             <Article style="skills-tools">
                 <SkillTitle title="Tools" />
-                <ul>
-                    <li>Visual Studio Code</li>
-                    <li>IntelliJ</li>
-                    <li>Android Studio</li>
-                    <li>Eclipse</li>
-                    <li>MySQL Workbench</li>
-                </ul>
+                <List titles={tools} />
             </Article>
 
             <Article style="skills-etc">
                 <SkillTitle title="Etc" />
-                <ul>
-                    <li>Git</li>
-                    <li>Scrum Master</li>
-                    <li>SVN</li>
-                </ul>
+                <List titles={etc} />
             </Article>
         </div>
     );
