@@ -1,22 +1,12 @@
 import { List } from "../base/List.jsx";
 import { Article, SkillTitle, CodingSkill } from "./Article.jsx";
 
-export function SkillContent() {
-    const tools = [
-        "Visual Studio Code",
-        "IntelliJ",
-        "Android Studio",
-        "Eclipse",
-        "MySQL Workbench"
-    ];
-    const etc = [
-        "Git", "Scrum Master", "SVN"
-    ];
+export function SkillContent({skills, tools, etc}) {
     return (
         <div className="skills">
             <Article style="skills-coding">
                 <SkillTitle title="Coding Skills" />
-                <CodingSkill />
+                <CodingSkill skills={skills}/>
             </ Article>
 
             <Article style="skills-tools">

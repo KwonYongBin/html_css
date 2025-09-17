@@ -10,6 +10,11 @@ export function SubTitle({title}) {
     );
 }
 
+export function ButtomDescription({desc}) {
+    return (
+        <p>{desc}</p>
+    );
+}
 export function Description({style}) {
     return (
         <p className={style}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 

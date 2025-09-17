@@ -1,37 +1,13 @@
 import { AvatarImage } from "../base/Avatar";
 import { Title, SubTitle } from "../base/Title";
 
-const testimonialList = [
-    {
-        "img" : "/images/testimonials/people1.webp",
-        "alt" : "testimonial-img",
-        "desc" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi alias sequi eaque officiis deserunt delectus laboriosam veniam, optio expedita magni ad repellat officia unde, animi cupiditate ex! Quod, vero at!",
-        "name" : "James Kim",
-        "company" : "Google"
-    },
-    {
-        "img" : "/images/testimonials/people2.webp",
-        "alt" : "testimonial-img",
-        "desc" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi alias sequi eaque officiis deserunt delectus laboriosam veniam, optio expedita magni ad repellat officia unde, animi cupiditate ex! Quod, vero at!",
-        "name" : "James Kim",
-        "company" : "Google"
-    },
-    {
-        "img" : "/images/testimonials/people3.webp",
-        "alt" : "testimonial-img",
-        "desc" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi alias sequi eaque officiis deserunt delectus laboriosam veniam, optio expedita magni ad repellat officia unde, animi cupiditate ex! Quod, vero at!",
-        "name" : "Anna Lee",
-        "company" : "Google"
-    },
-]
-
-export function Testimonials() {
+export function Testimonials({data}) {
     return (
         <section id="testimonial" class="section container">
             <Title title="Testimonial"/>
             <SubTitle title="See What they say about me"/>
             <ul class="testimonials">
-                {testimonialList && testimonialList.map (item =>
+                {data.testimonialList && data.testimonialList.map (item =>
                     <li class="testimonial">
                         <AvatarImage 
                             img={item.img}
