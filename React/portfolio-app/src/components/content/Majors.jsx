@@ -18,8 +18,8 @@ export function Major({icons, title, subjects, style}) {
     );
 }
 
-export function Majors({majors}) {
 
+export function Majors({ majors }) {
     return (
         <ul className="majors">           
             { majors && majors.map(major => 

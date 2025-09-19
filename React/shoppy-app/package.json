@@ -2,7 +2,7 @@
   "name": "shoppy-app",
   "version": "0.1.0",
   "private": true,
-  "type" : "module",
+  "type": "module",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -14,7 +14,6 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.9.1",
     "react-scripts": "5.0.1",
-    "sass": "^1.92.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

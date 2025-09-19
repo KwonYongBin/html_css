@@ -1,17 +1,13 @@
-import { Description, SubTitle, Title } from "../base/Title.jsx";
-import { SkillContent } from "./SkillContent.jsx";
+import { Title, SubTitle, Description } from '../base/Title.jsx';
+import { SkillsContent } from './SkillsContent.jsx';
 
 export function Skills({data}) {
     return (
         <section id="skill" class="section container">
             <Title title="My Skills" />
-            <SubTitle title="Skills & Attributes"/>
-            <Description style=""/>
-            <SkillContent 
-                skills={data.skills}
-                tools={data.tools} 
-                etc={data.etc}
-            />
+            <SubTitle title="Skills & Attributes" />
+            <Description style="" />
+            <SkillsContent data={data} />
         </section>
     );
 }

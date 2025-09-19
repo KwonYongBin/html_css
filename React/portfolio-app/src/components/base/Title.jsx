@@ -4,15 +4,16 @@ export function Title({title}) {
         <h2 className="title">{title}</h2>
     );
 }
+
 export function SubTitle({title}) {
     return (
         <p class="description">{title}</p>
     );
 }
 
-export function ButtomDescription({desc}) {
+export function BottomDescription({description}) {
     return (
-        <p>{desc}</p>
+        <p>{description}</p>        
     );
 }
 export function Description({style}) {
