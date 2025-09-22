@@ -4,6 +4,12 @@ import { axiosData } from '../utils/dataFetch.js';
 import { PiGiftThin } from 'react-icons/pi';
 import { ImageList } from '../components/commons/ImageList.jsx';
 import { StarRating } from '../components/commons/StarRating.jsx';
+import { Detail } from '../components/detailTabs/Detail.jsx'
+import { Review } from '../components/detailTabs/Review.jsx'
+import { QnA } from '../components/detailTabs/QnA.jsx'
+import { Return } from '../components/detailTabs/Return.jsx'
+
+
 
 export function ProductDetail({ addCart }) {
     const { pid } = useParams();//useParams는 객체로 데이터를 받는다
@@ -111,8 +117,18 @@ export function ProductDetail({ addCart }) {
                     )}
                 </ul>
 
-                {/* {tabName === "detail" && 디테일컴포넌트}
-                {tabName === "review" && 리뷰컴포넌트} */}
+                {tabName === "detail" && 
+                    <Detail 
+                    imgList={imgList}
+                    info={product.detailInfo }
+                />}
+                {tabName === "review" &&
+                    <Review 
+
+                    />
+                }
+                {tabName === "qna" && <QnA />}
+                {tabName === "return" && <Return/>}
 
             </div>
             <div style={{marginBottom:"50px"}}></div>

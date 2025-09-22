@@ -44,6 +44,17 @@ export function StarRating({totalRate, style}) {
           {totalRate}
         </span>
       )}
+      {/* 숫자 표시 */}
+      {style === "star-black-big" && (
+        <>
+          <span className={style.concat(" number")}>
+            {totalRate} /
+          </span>
+          <span className={style.concat(" tot-number")}>
+            5
+          </span>
+        </>
+      )}
     </div>
   );
 }

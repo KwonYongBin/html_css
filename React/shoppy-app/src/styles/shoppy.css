@@ -30,6 +30,10 @@ p {
   padding: 0;
 }
 
+ul, li, ol {
+  list-style: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -512,6 +516,7 @@ button {
   font-size: 1rem;
   color: #333;
   align-self: flex-start;
+  margin-top: 20px;
   /* border: 2px solid blue; */
 }
 
