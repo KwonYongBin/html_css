@@ -34,8 +34,6 @@ export function DetailImages({imgList}) {
  * ProductDetail > Detail > DetailInfo
  */
 export function DetailInfo({info}) {
-    console.log('info->',info);
-    
     return (
         <div className='detail-info'>
             <h4 className='detail-info-title-top'>
