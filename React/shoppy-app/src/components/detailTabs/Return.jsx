@@ -11,6 +11,9 @@ export function Return() {
         fetch();
     }, [])
 
+    console.log(returnData);
+    
+
     return (
         <div>
             <div style={{paddingTop:"20px"}}></div>
@@ -23,7 +26,8 @@ export function Return() {
                             <td style={{width:"30%", textAlign:"center"}}>{item.title}</td>
                             <td>
                                 <ul  style={{textAlign:"left"}}>
-                                { item.infoList && item.infoList .map(item =>
+                                {item.infoList 
+                                    && item.infoList .map(item =>
                                         <li>{item}</li>
                                     )}
                                 </ul>

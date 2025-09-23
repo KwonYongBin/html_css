@@ -14,8 +14,11 @@ export function QnA() {
         fetch();
     }, []);
 
+//    const handleToggle = (qid) => {
+//         setOpenQid(prev => (prev === qid) ? null : qid);
+//    }
    const handleToggle = (qid) => {
-        setOpenQid(prev => (prev === qid) ? null : qid);
+        setOpenQid(prev => (prev === qid) ? null : qid)
    }
 
    const handleToggleButton = () => {
