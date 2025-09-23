@@ -2,7 +2,7 @@
  * 상품리스트에서 이미지, 상품명, 가격 --> 장바구니 리스트에 추가하는 함수
  */
 export function cartItemsAddInfo(products, items) {
-    items.map((item) => {
+    return items.map((item) => {
         const product = products.find((product) => item.pid === product.pid);
 
         return {
@@ -29,8 +29,9 @@ export function cartItemsCheck(prevItems, cartItem) {
             ? { ...item, qty: item.qty + 1 } //... <= 의 뜻은 item이 가지고 있는 데이터를 펼쳐놓는다는 뜻
             : item
         );
-    } else {         
-        return [...prevItems, { ...cartItem }];  //존재하지 않으면 새로운 item 추가
+    } else {    
+        const cid = Math.floor(Math.random()*1000);     
+        return [...prevItems, { ...cartItem, cid:cid }];  //존재하지 않으면 새로운 item 추가
         // { ...cartItem } <= 얕은 복사를 하지 않으면 주소값만 들어가기 때문에 정확한 비교가 불가하다.
     }
 }

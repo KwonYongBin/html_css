@@ -14,7 +14,16 @@ export function Cart({ items }) {
         fetch();
     });
 
-    console.log('cartList -> ', cartList);
+    const handleUpdateCartList = (cid, type) => {
+        setCartList((cartList) => {
+            return cartList.map(item => 
+                item.cid === cid ?
+                type === '+' ? {...item, qty: qty + 1 }
+                             : {...item, qty: qty - 1 }
+            : item
+            );
+        });
+    }
 
     return (
         <div className="cart-container">
@@ -22,6 +31,7 @@ export function Cart({ items }) {
             {items && items.map(item =>
                 <div key={item.pid}>
                     <div className="cart-item">
+                        {item.cid}
                         <img src={items.image} />
                         <div className="cart-item-details">
                             <p className="cart-item-title">{item.name}</p>
@@ -29,9 +39,19 @@ export function Cart({ items }) {
                             <p className="cart-item-price">{parseInt(item.price).toLocaleString()}원</p>
                         </div>
                         <div className="cart-quantity">
-                            <button type="button">-</button>
+                            <button 
+                                type="button"
+                                onClick={() => {
+                                    handleUpdateCartList(item.cid, '-')
+                                }}
+                            >-</button>
                             <input type="text" value={item.qty} readOnly/>
-                            <button type="button">+</button>
+                            <button 
+                                type="button"
+                                onClick={() => {
+                                    handleUpdateCartList(item.cid, '+')
+                                }}
+                            >+</button>
                         </div>
                         <button className="cart-remove">
                             <RiDeleteBin6Line />
