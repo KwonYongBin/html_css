@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { axiosData } from '../../utils/dataFetch.js' 
+import React, { useState, useEffect } from 'react';
+import { axiosData } from '../../utils/dataFetch.js';
 
 export function Return() {
     const [returnData, setReturnData] = useState({});
-    useEffect(() => {
+    useEffect(()=> {
         const fetch = async() => {
             const jsonData = await axiosData("/data/productReturn.json");
             setReturnData(jsonData);
@@ -11,25 +11,32 @@ export function Return() {
         fetch();
     }, [])
 
-  return (
-    <div>
-        <div style={{padding:"20px"}}></div>
-        <h4>{returnData && returnData.title}</h4>
-        <p style={{marginBottom:"30px"}}>{returnData && returnData.description}</p>
-        <table>
-            <tbody style={{textAlign:"center"}}>
-                {returnData.list && returnData.list.map(item =>
-                    <tr style={{border:"1px solid #ddd", display:"block"}}>
-                        <td style={{width:"30%", background:"#eee"}}>{item.title}</td>
-                        <td>
-                            <ul style={{textAlign:"left"}}>
-                                <li>{item.infoList}</li>
-                            </ul>
-                        </td>
-                    </tr>
-                )}
-            </tbody>
-        </table>
-    </div>
-  )
+    console.log(returnData);
+    
+
+    return (
+        <div>
+            <div style={{paddingTop:"20px"}}></div>
+            <h4>{returnData && returnData.title}</h4>
+            <p style={{paddingBottom:"20px"}}>{returnData && returnData.description}</p>
+            <table className='review-list-content'>
+                <tbody>
+                    {returnData.list && returnData.list.map(item => 
+                        <tr>
+                            <td style={{width:"30%", textAlign:"center"}}>{item.title}</td>
+                            <td>
+                                <ul  style={{textAlign:"left"}}>
+                                { item.infoList && item.infoList .map(item =>
+                                        <li>{item}</li>
+                                    )}
+                                </ul>
+                            </td>
+                        </tr>
+                    ) }
+                    <tr><td colSpan={2}></td></tr>
+                </tbody>
+            </table>
+        </div>
+    );
 }
+

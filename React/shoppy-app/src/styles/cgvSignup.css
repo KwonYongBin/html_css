@@ -12,7 +12,7 @@
 }
 :root {
     /* color list */
-    /* --color-primary: rgb(77, 77, 77); */
+    --color-primary: rgb(77, 77, 77);
     --color-black: #050a13;
     --color-white: #fff;
     --color-border: tomato;
