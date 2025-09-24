@@ -32,7 +32,7 @@ export default function App() {
         setCartCount(cartCount - findItem.qty);
 
         setCartItems((cartItems) => {
-            return cartItems.filter(item => !(item.cid === cid));  
+            return cartItems.filter(item => !(item.cid === cid));
         });
 
     } else {

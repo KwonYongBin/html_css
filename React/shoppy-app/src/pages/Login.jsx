@@ -2,8 +2,10 @@ import { useState, useRef } from 'react';
 import { FaRegUser } from "react-icons/fa6";
 import { FaLock } from "react-icons/fa";
 import { validateFormCheck } from '../utils/validate.js';
+import { useNavigate } from 'react-router-dom';
 
 export function Login() {
+    const navigate = useNavigate();
     const idRef = useRef(null);
     const pwdRef = useRef(null);
     const [formData, setFormData] = useState({id:'', pwd:''});
@@ -36,9 +38,23 @@ export function Login() {
             setErrors: setErrors,
             errors: errors
         }
-        if(validateFormCheck(param)) {
-            console.log('서버전송 ---> ', formData);  
-        }
+        // if(validateFormCheck(param)) {
+            console.log('서버전송 ---> ', formData);
+        //     const did = "test";
+        //     const dpwd = "1234";
+        //     if(did === formData.id && dpwd === formData.pwd) {
+        //         alert("로그인 성공");
+        //         const loginInfo = {
+        //             "userId" : formData.id,
+        //             "token" : "test1234"
+        //         }
+        //         localStorage.setItem("loginInfo", JSON.stringify(loginInfo));//객체를 문자열로 저장
+        //         navigate("/");
+        //     } else {
+        //         alert("로그인 실패");
+        //         idRef.current.focus();
+        //     }
+        // }
     }
     
     return (

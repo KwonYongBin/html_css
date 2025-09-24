@@ -18,6 +18,19 @@ export function Support() {
         supportData()
     }, []);
 
+    const filterList = (type) => { //탭을 클릭하면 해당되는 이름을 가진 데이터를 보여주는 함수
+        const filter = async () => {
+            const filterJson = await axiosData("/data/support.json");
+            if (type === 'all') {
+                setList(filterJson.list)
+            } else {
+                const filterData = filterJson.list.filter((item) => item.type === type)
+                setList(filterData);
+            }
+        }
+        filter();
+    }
+
     return (
         <div classNameName="content">
             <div className="support center-layout">
@@ -26,7 +39,7 @@ export function Support() {
                     <p style={{ color: "#777" }}>CGV의 주요한 이슈 및 여러가지 소식들을 확인할 수 있습니다.</p>
                     <SerchForm category={category} />
                     <nav>
-                        <MenuList menus={menus} />
+                        <MenuList menus={menus} filterList={filterList} />
                     </nav>
                     <p id="before_table" style={{ color: "#777" }}>총 114건이 검색되었습니다. </p>
                     {/* 내용 출력 - 테이블 */}
