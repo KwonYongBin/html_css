@@ -21,7 +21,10 @@ export function Header({cartCount}) {
                     </Link>
                     <Link to="/signup">
                         <button type="button">Signup</button>
-                    </Link>                   
+                    </Link>
+                    <Link to="/support">
+                        <button type="button">고객센터</button>
+                    </Link>
                 </nav>
             </div>
         </div>

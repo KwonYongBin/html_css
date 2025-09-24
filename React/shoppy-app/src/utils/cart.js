@@ -48,6 +48,7 @@ export function cartItemsAddInfo(products, items) {
             ...item,
             image: product.image,
             name: product.name,
+            info: product.info,
             price: product.price
         };
     });
