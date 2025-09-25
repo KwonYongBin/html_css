@@ -20,9 +20,9 @@ export function Cart({ updateCart }) {
     useEffect(() => {
         showCart();
         // const fetch = async () => {
-        //     const jsonData = await axiosData("/data/products.json");
-        //     setCartList(cartItemsAddInfo(jsonData, items));
-        //     // setTotalPrice(getTotalPrice(jsonData, items));
+        //      const jsonData = await axiosData("/data/products.json");
+        //      setCartList(cartItemsAddInfo(jsonData, items));
+        //      setTotalPrice(getTotalPrice(jsonData, items));
         // }
         // fetch();
     }, []);
