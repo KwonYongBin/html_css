@@ -1,0 +1,132 @@
+{
+    "category": [
+        {
+            "name": "제목",
+            "value": "title"
+        },
+        {
+            "name": "내용",
+            "value": "content"
+        },
+        {
+            "name": "등록날짜",
+            "value": "cdate"
+        }
+    ],
+    "menus": [
+        {
+            "href" : "#",
+            "name" : "전체",
+            "style" : "filter-menu",
+            "type" : "all"
+        },
+        {
+            "href": "#",
+            "name": "시스템점검",
+            "style": "filter-menu",
+            "type" : "system"
+        },
+        {
+            "href": "#",
+            "name": "극장",
+            "style": "filter-menu",
+            "type" : "theater"
+            
+        },
+        {
+            "href": "#",
+            "name": "행사/이벤트",
+            "style": "filter-menu",
+            "type" : "event"
+            
+        },
+        {
+            "href": "#",
+            "name": "제휴이벤트",
+            "style": "filter-menu",
+            "type" : "partner"
+            
+        },
+        {
+            "href": "#",
+            "name": "기타",
+            "style": "filter-menu",
+            "type" : "etc"
+            
+        }
+    ],
+    "list": [
+        {
+            "type": "system",
+            "title": "iOS 18 업데이트 관련 예매 서비스 이용안내",
+            "rdate": "2024.09.13",
+            "hits": "118691"
+        },
+        {
+            "type": "system",
+            "title": "Sns 업데이트 관련 예매 서비스 이용안내",
+            "rdate": "2025.09.05",
+            "hits": "118692"
+        },
+        {
+            "type": "theater",
+            "title": "안드로이드 15 업데이트 관련 시스템 점검 안내",
+            "rdate": "2024.09.20",
+            "hits": "54321"
+        },
+        {
+            "type": "event",
+            "title": "2025년 새해 맞이 특별 할인 이벤트",
+            "rdate": "2024.12.25",
+            "hits": "87654"
+        },
+        {
+            "type": "partner",
+            "title": "결제 시스템 안정화를 위한 긴급 서버 점검",
+            "rdate": "2024.10.05",
+            "hits": "12345"
+        },
+        {
+            "type": "theater",
+            "title": "개인정보처리방침 변경 안내",
+            "rdate": "2024.11.01",
+            "hits": "98765"
+        },
+        {
+            "type": "etc",
+            "title": "신규 서비스 '프리미엄 멤버십' 출시!",
+            "rdate": "2024.10.15",
+            "hits": "23456"
+        },
+        {
+            "type": "system",
+            "title": "일부 기능 오류 수정 완료 안내",
+            "rdate": "2024.09.28",
+            "hits": "67890"
+        },
+        {
+            "type": "event",
+            "title": "가을 맞이 스페셜 쿠폰 증정!",
+            "rdate": "2024.10.10",
+            "hits": "78901"
+        },
+        {
+            "type": "partner",
+            "title": "서비스 점검 및 기능 개선 작업",
+            "rdate": "2024.11.15",
+            "hits": "34567"
+        },
+        {
+            "type": "etc",
+            "title": "모바일 앱 업데이트 - v3.2.1",
+            "rdate": "2024.12.01",
+            "hits": "45678"
+        },
+        {
+            "type": "system",
+            "title": "서버 증설 및 네트워크 최적화 작업 안내",
+            "rdate": "2024.12.10",
+            "hits": "56789"
+        }
+    ]
+}
