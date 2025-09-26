@@ -10,11 +10,13 @@ export const CartContext = createContext();
  */
 export const CartProvider = ({children}) => {
     const [cartCount, setCartCount] = useState(0);  // 장바구니 수량 관리
-    const [cartList, setCartList] = useState([]);
+    const [cartList, setCartList] = useState([]);   // 장바구니 리스트
+    const [totalPrice, setTotalPrice] = useState(0);//장바구니 상품 전체 가격
 
     return (
         <CartContext.Provider value={{ cartCount, setCartCount,
-                                        cartList, setCartList 
+                                        cartList, setCartList,
+                                        totalPrice, setTotalPrice
         }}> {/* 범위내 자식들에게 cartCount를 전달*/}
             {children}
         </CartContext.Provider>

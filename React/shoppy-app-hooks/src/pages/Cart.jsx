@@ -1,90 +1,16 @@
-import { useState, useEffect, useContext } from 'react';
+import { useCart } from '../hooks/useCart.js';
+import { useEffect, useContext } from 'react';
 import { RiDeleteBin6Line } from 'react-icons/ri';
-import { axiosData } from '../utils/dataFetch.js';
 import { Link, useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CacrContext.js';
-import { useCart } from '../hooks/useCart.js';
-
-import { cartItemsAddInfo, getTotalPrice } from '../utils/cart.js';
-
 import '../styles/cart.css';
 
 export function Cart() {
-    const { showCart, updateCart } = useCart();
-    const { cartList } = useContext(CartContext);
-
     const navigate = useNavigate();
-    // const [cartList, setCartList] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
-
-    useEffect(() => {
-        showCart();
-        // const fetch = async () => {
-        //      const jsonData = await axiosData("/data/products.json");
-        //      setCartList(cartItemsAddInfo(jsonData, items));
-        //      setTotalPrice(getTotalPrice(jsonData, items));
-        // }
-        // fetch();
-    }, []);
-
-    //수량 업데이트 함수
-    const handleUpdateCartList = (cid, type) => {
-        // updateCart(cid, type);
-        // setCartList((cartList) => cartList.map((item) => {
-        //     // 삼항연산자를 가독성 증가를 위해 아래 if-else로 변경
-        //     // item.cid === cid ? ( type === '+'? {...item, qty: item.qty+1}  : (item.qty > 1 ? {...item, qty: item.qty-1} : item)) : item
-
-        //     if (item.cid === cid) {  // cid 가 일치하면
-        //         if (type === "+") { // 타입이 +면
-        //             return { ...item, qty: item.qty + 1 };
-        //         } else if (item.qty > 1) { // 타입이 +가 아니고 qty가 1보다 크면
-        //             return { ...item, qty: item.qty - 1 }
-        //         } else { // 타입이 +가 아니고, qty가 1보다 작으면
-        //             return item;
-        //         }
-        //     } else { // cid가 일치하지 않으면
-        //         return item;
-        //     }
-
-        // }));
-
-        // 총 금액 반영 로직 수량 변경에 따른 전체 상품 가격 변경
-        const findItem = cartList.find((item) => item.cid === cid);
-
-        // 삼항연산자를 가독성 증가를 위해 아래 if-else로 변경
-        // type === '+'?  setTotalPrice(totalPrice + findItem.price) 
-        //                 : findItem.qty > 1 ? setTotalPrice(totalPrice-findItem.price)
-        //                                 : setTotalPrice(totalPrice);
-
-        if (type === '+') {
-            setTotalPrice(totalPrice + findItem.price)
-
-        } else if (findItem.qty > 1) {
-            setTotalPrice(totalPrice - findItem.price)
-
-        } else {
-            setTotalPrice(totalPrice);
-        }
-        //cartCount 변경을 위한 App의 함수 호출
-        // updateCart(cid);
-
-    }
-
-    //장바구니 아이템 삭제 함수
-    const handleRemoveCartList = (cid) => {
-        // 타겟을 잡음
-        const findItem = cartList.find(item => item.cid === cid);
-
-        // 값 반영
-        setTotalPrice(totalPrice - (findItem.qty * findItem.price));
-
-        // cartList 상태(state) 업데이트
-        // setCartList((cartList) => {
-        //     return cartList.filter(item => !(item.cid === cid));
-        // });
-
-        updateCart(cid);
-    }
+    const { showCart, updateCart, removeCart } = useCart();
+    const { cartList, totalPrice } = useContext(CartContext);
+    
+    useEffect(() => { showCart() }, []);
 
     return (
         <div className='cart-container'>
@@ -111,7 +37,7 @@ export function Cart() {
                                 onClick={() => { updateCart(item.cid, '+') }}>+</button>
                         </div>
                         <button className='cart-remove'
-                            onClick={() => { updateCart(item.cid) }}>
+                            onClick={() => { removeCart(item.cid, item.qty, item.price) }}>
                             <RiDeleteBin6Line />
                         </button>
                     </div>
@@ -148,7 +74,9 @@ export function Cart() {
                             type='button'
                             onClick={() => { // 주문결제 페이지도 이동
                                 // navigate(이동주소, {state:전송 전송 하려는 객체})
-                                navigate("/checkout", {state:{cartList: cartList, totalPrice:totalPrice}}) //state는 객체이기 때문에 각가 다른 형식의 2개의 데이터를 넘길시 객체 형대로 만들어주고 프롭스로 넘겨준다
+                                //state는 객체이기 때문에 각가 다른 형식의 2개의 데이터를 넘길시 객체 형대로 만들어주고 프롭스로 넘겨준다
+                                // navigate("/checkout", {state:{cartList: cartList, totalPrice:totalPrice}})
+                                navigate("/checkout")
                             }}
                         >주문하기</button>
                     </div>
