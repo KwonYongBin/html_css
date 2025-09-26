@@ -9,8 +9,8 @@ import { cartItemsAddInfo, getTotalPrice } from '../utils/cart.js';
 
 import '../styles/cart.css';
 
-export function Cart({ updateCart }) {
-    const { showCart } = useCart();
+export function Cart() {
+    const { showCart, updateCart } = useCart();
     const { cartList } = useContext(CartContext);
 
     const navigate = useNavigate();
@@ -29,8 +29,11 @@ export function Cart({ updateCart }) {
 
     //수량 업데이트 함수
     const handleUpdateCartList = (cid, type) => {
+        // updateCart(cid, type);
         // setCartList((cartList) => cartList.map((item) => {
-        //     // item.cid === cid ? ( type === '+'? {...item, qty: item.qty+1}  : (item.qty > 1 ? {...item, qty: item.qty-1} : item)) : item  
+        //     // 삼항연산자를 가독성 증가를 위해 아래 if-else로 변경
+        //     // item.cid === cid ? ( type === '+'? {...item, qty: item.qty+1}  : (item.qty > 1 ? {...item, qty: item.qty-1} : item)) : item
+
         //     if (item.cid === cid) {  // cid 가 일치하면
         //         if (type === "+") { // 타입이 +면
         //             return { ...item, qty: item.qty + 1 };
@@ -42,27 +45,28 @@ export function Cart({ updateCart }) {
         //     } else { // cid가 일치하지 않으면
         //         return item;
         //     }
+
         // }));
 
+        // 총 금액 반영 로직 수량 변경에 따른 전체 상품 가격 변경
+        const findItem = cartList.find((item) => item.cid === cid);
 
-        // // 이게 무슨 변수인지 주석을 달면 매우 편함
-        // const findItem = cartList.find((item) => item.cid === cid);
+        // 삼항연산자를 가독성 증가를 위해 아래 if-else로 변경
+        // type === '+'?  setTotalPrice(totalPrice + findItem.price) 
+        //                 : findItem.qty > 1 ? setTotalPrice(totalPrice-findItem.price)
+        //                                 : setTotalPrice(totalPrice);
 
-        // // type === '+'?  setTotalPrice(totalPrice + findItem.price) 
-        // //                 : findItem.qty > 1 ? setTotalPrice(totalPrice-findItem.price)
-        // //                                 : setTotalPrice(totalPrice);
-        // // 총 금액 반영 로직
-        // if (type === '+') {
-        //     setTotalPrice(totalPrice + findItem.price)
+        if (type === '+') {
+            setTotalPrice(totalPrice + findItem.price)
 
-        // } else if (findItem.qty > 1) {
-        //     setTotalPrice(totalPrice - findItem.price)
+        } else if (findItem.qty > 1) {
+            setTotalPrice(totalPrice - findItem.price)
 
-        // } else {
-        //     setTotalPrice(totalPrice);
-        // }
-
-        // updateCart(cid, type);
+        } else {
+            setTotalPrice(totalPrice);
+        }
+        //cartCount 변경을 위한 App의 함수 호출
+        // updateCart(cid);
 
     }
 
@@ -100,14 +104,14 @@ export function Cart({ updateCart }) {
                             <button type='button'
                                 onClick={() => {
                                     item.qty > 1 &&
-                                    handleUpdateCartList(item.cid, '-')
+                                    updateCart(item.cid, '-')
                                 }}>-</button>
                             <input type='text' value={item.qty} readOnly />
                             <button type='button'
-                                onClick={() => { handleUpdateCartList(item.cid, '+') }}>+</button>
+                                onClick={() => { updateCart(item.cid, '+') }}>+</button>
                         </div>
                         <button className='cart-remove'
-                            onClick={() => { handleRemoveCartList(item.cid) }}>
+                            onClick={() => { updateCart(item.cid) }}>
                             <RiDeleteBin6Line />
                         </button>
                     </div>

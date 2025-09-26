@@ -27,5 +27,28 @@ export function useCart() {
         fetch();
     }
 
-    return { addCart, showCart }
+    // 장바구니 수량 변경
+    const updateCart = (cid, type) => {
+        //카트수량 변경
+            // 삼항연산자를 가독성 증가를 위해 아래 if-else로 변경
+            setCartList((cartList) => cartList.map((item) => 
+                item.cid === cid ?
+                    type === '+'? {...item, qty: item.qty+1}   
+                                : item.qty > 1 ? {...item, qty: item.qty-1} : item
+                :   item  
+                // if (item.cid === cid) {  // cid 가 일치하면
+                //     if (type === "+") { // 타입이 +면
+                //         return { ...item, qty: item.qty + 1 };
+                //     } else if (item.qty > 1) { // 타입이 +가 아니고 qty가 1보다 크면
+                //         return { ...item, qty: item.qty - 1 }
+                //     } else { // 타입이 +가 아니고, qty가 1보다 작으면
+                //         return item;
+                //     }
+                // } else { // cid가 일치하지 않으면
+                //     return item;
+                // }
+        ));
+    }
+
+    return { addCart, showCart, updateCart  }
 }

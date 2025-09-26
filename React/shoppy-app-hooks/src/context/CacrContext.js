@@ -15,7 +15,6 @@ export const CartProvider = ({children}) => {
     return (
         <CartContext.Provider value={{ cartCount, setCartCount,
                                         cartList, setCartList 
-
         }}> {/* 범위내 자식들에게 cartCount를 전달*/}
             {children}
         </CartContext.Provider>
