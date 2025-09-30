@@ -11,10 +11,10 @@ import { useSelector } from 'react-redux';
 export function Header() {
     const { handleLogout } = useAuth();
     const { isLogin } = useContext(AuthContext);
-    // const { cartCount } = useContext(CartContext);
 
     const cartCount = useSelector((state) => state.cart.cartCount);
     const cartList = useSelector((state) => state.cart.cartList);
+    
     console.log("Header:: cartList ->", cartList);
     
 
