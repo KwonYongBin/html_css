@@ -1,15 +1,10 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiShoppingBag } from "react-icons/fi";
 import { GiShoppingCart } from "react-icons/gi";
-import { useEffect, useState } from 'react';
 
 export function Header({cartCount}) {
-    // // const [] = useState();
-    // useEffect(() => {
-    //     const loginInfo = localStorage.getItem("loginInfo");
-    //     console.log('loginInfo', JSON.parse(loginInfo).userId); // 문자열을 제이슨 객체로 변환
-    // }, []);
-    
+
     return (
         <div className="header-outer">
             <div className="header">
@@ -28,10 +23,10 @@ export function Header({cartCount}) {
                     </Link>
                     <Link to="/signup">
                         <button type="button">Signup</button>
-                    </Link>
+                    </Link>                   
                     <Link to="/support">
-                        <button type="button">고객센터</button>
-                    </Link>
+                        <button type="button">Support</button>
+                    </Link>                   
                 </nav>
             </div>
         </div>

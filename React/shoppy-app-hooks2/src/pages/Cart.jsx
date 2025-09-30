@@ -3,20 +3,18 @@ import { Link, useNavigate } from 'react-router-dom';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { axiosData } from '../utils/dataFetch.js';
 import { cartItemsAddInfo, getTotalPrice } from '../utils/cart.js';
+import { useCart } from '../hooks/useCart.js';
+
 import '../styles/cart.css';
 
 export function Cart({ items, updateCart }) {
+    const {showCart} = useCart();
     const navigate = useNavigate();
     const [cartList, setCartList] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);   
     
     useEffect(()=> {
-        const fetch = async() => {
-            const jsonData = await axiosData("/data/products.json");
-            setCartList(cartItemsAddInfo(jsonData, items));
-            setTotalPrice(getTotalPrice(jsonData, items));
-        }
-        fetch();
+        showCart();
     }, []);    
 
     //수량 업데이트 함수

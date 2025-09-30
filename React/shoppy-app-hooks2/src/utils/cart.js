@@ -23,6 +23,9 @@ export function getTotalPrice(products, items) {
 
 /**
  * 상품리스트에서 이미지, 상품명, 가격 --> 장바구니 리스트에 추가
+ * 리스트 아이템 병합
+ * @param products - 
+ * 
  */
 export function cartItemsAddInfo(products, items) {
     return items.map((item)=> { 

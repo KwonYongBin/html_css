@@ -9,6 +9,7 @@ import { ProductDetail } from './pages/ProductDetail.jsx';
 import { Cart } from './pages/Cart.jsx';
 import { CheckoutInfo } from './pages/CheckoutInfo.jsx';
 import { Support } from './pages/Support.jsx';
+
 import { cartItemsCheck, updateCartItemsQty } from './utils/cart.js';
 
 import './styles/cgvSignup.css';
@@ -32,7 +33,7 @@ export default function App() {
         setCartCount(cartCount - findItem.qty);
 
         setCartItems((cartItems) => {
-            return cartItems.filter(item => !(item.cid === cid));
+            return cartItems.filter(item => !(item.cid === cid));  
         });
 
     } else {
@@ -57,8 +58,8 @@ export default function App() {
           <Route path="/cart" element={<Cart  items={cartItems} 
                                               updateCart={updateCart}/>} />
           <Route path="/products/:pid" element={<ProductDetail addCart={addCart} />} />
-          <Route path='/checkout' element={<CheckoutInfo />} />
-          <Route path='/support' element={<Support />} />
+          <Route path="/checkout" element={<CheckoutInfo />} />
+          <Route path="/support" element={<Support />} />
         </Route>
       </Routes>
     </BrowserRouter>

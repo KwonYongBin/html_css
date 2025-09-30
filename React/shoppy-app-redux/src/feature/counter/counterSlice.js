@@ -1,0 +1,26 @@
+import { createSlice } from '@reduxjs/toolkit'
+
+const initialState = {
+  value: 0, // 상점에 등록된 전역 초기값
+}
+
+export const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
+  reducers: {
+    increment: (state) => {
+      state.value += 1
+    },
+    decrement: (state) => {
+      state.value -= 1
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload
+    },
+  },
+})
+
+// Action creators are generated for each case reducer function
+export const { increment, decrement, incrementByAmount } = counterSlice.actions //API function or Component에서 호출 (액션함수)
+
+export default counterSlice.reducer // store에서 import
