@@ -23,7 +23,7 @@ export function useProduct() {
         // productList가 2차원 배열이므로 flat() 함수를 이용하여 1차원 변경 후 filter
         const [filterProduct] = productList.flat().filter((item) => item.pid === pid);
         setProduct(filterProduct); 
-        setImgList(filterProduct.imgList);                        
+        setImgList(filterProduct.imgList);       
     }
 
     return { createProduct, filterProduct };

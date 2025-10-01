@@ -11,7 +11,7 @@ import { axiosData } from '../../utils/dataFetch.js';
 
 export const addCart = (cartItem) => async (dispatch) => { //addCartItem
     //redux
-    dispatch(addCartItem({ "cartItem": cartItem })); //{"cartItem" : cartItem} payload
+    dispatch(addCartItem({"cartItem" : {"pid" : pid, "size" : size, "qty" : qty}})); //{"cartItem" : cartItem} payload
     dispatch(updateCartCount());
 }
 
@@ -31,7 +31,7 @@ export const updateCart = (cid, type) => async (dispatch) => {
 }
 
 export const removeCart = (cid) => async(dispatch) => {
-    dispatch(removeCartItem({"cid" : cid}));
+    dispatch(removeCartItem({"cid": cid}));
     dispatch(updateTotalPrice());
     dispatch(updateCartCount());
 }

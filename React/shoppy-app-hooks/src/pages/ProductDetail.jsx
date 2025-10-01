@@ -23,7 +23,7 @@ export function ProductDetail() {
     const tabEventNames = ['detail', 'review', 'qna', 'return'];
     
     useEffect(()=> {
-        filterProduct(pid);
+        dispatch(filterProduct(pid));
     }, []);
 
     //쇼핑백 추가하기 함수
