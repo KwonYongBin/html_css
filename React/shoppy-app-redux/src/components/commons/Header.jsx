@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { FiShoppingBag } from "react-icons/fi";
 import { GiShoppingCart } from "react-icons/gi";
-import { useDispatch, useSelector } from 'react-redux';
-import { getLogout } from '../../feature/auth/authAPI.js'
+import { useSelector, useDispatch } from 'react-redux';
+import { getLogout } from '../../feature/auth/authAPI.js';
 
 export function Header() {
     const navigate = useNavigate();
@@ -13,11 +13,11 @@ export function Header() {
     const handleLogout = () => {
         const succ = dispatch(getLogout());
         const loginInfo = localStorage.getItem("loginInfo");
-        if(succ && loginInfo === null){
-            alert("로그아웃 되었습니다.");
+        if(succ && loginInfo === null) {
+            alert("로그아웃 되었습니다");
             navigate("/");
-        } 
-    }    
+        }
+    }
 
     return (
         <div className="header-outer">

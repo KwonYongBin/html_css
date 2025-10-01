@@ -21,37 +21,42 @@ import './styles/shoppy.css';
 export default function App() {
   return (
     <AuthProvider>
-      <ProductProvider>
-        <CartProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path="/all" element={<Products />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/cart" element={
-                  <ProectedPageRoute>
-                    <Cart />
-                  </ProectedPageRoute>
-                } />
-                <Route path="/products/:pid" element={<ProductDetail />} />
-                <Route path="/checkout"
-                  element={
-                    <ProectedPageRoute>
-                      <CheckoutInfo />
-                    </ProectedPageRoute>} />
-
-                <Route path="/support" element={
-                  <ProectedPageRoute>
-                    <Support />
-                  </ProectedPageRoute>
-                } />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-        </CartProvider>
-      </ProductProvider>
+    <ProductProvider>
+    <CartProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home/>} />
+          <Route path="/all" element={<Products/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/cart" 
+                  element={  <ProectedPageRoute>
+                                <Cart />
+                            </ProectedPageRoute>  } />
+          <Route path="/products/:pid" element={<ProductDetail />} />
+          <Route path="/checkout" 
+                 element={  <ProectedPageRoute>
+                                <CheckoutInfo />
+                            </ProectedPageRoute>  } />
+                
+          <Route path="/support" element={
+            <ProectedPageRoute>
+              <Support />
+            </ProectedPageRoute>
+            } />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+    </CartProvider>
+    </ProductProvider>
     </AuthProvider>
   );
 }
+
+
+
+
+
+
+
