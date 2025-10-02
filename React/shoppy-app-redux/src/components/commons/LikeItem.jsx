@@ -3,6 +3,7 @@ import { TbThumbUp } from 'react-icons/tb';
 import { FaRegCircleQuestion } from 'react-icons/fa6'
 
 export function LikeItem({style, icons, value}) {
+    
     return (
         <button type='button'
                 className={style}>
