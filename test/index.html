@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            height: 100vh;
+        }
+        article {
+            width: 50%;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none; 
+        }
+        .test1 {
+            background-color: blue;
+        }
+        .test2 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <article class="test1">
+            <div style="height: 200vh;">
+                <h1>test1</h1>
+            </div>
+            <h1>test1</h1>
+        </article>
+        <article class="test2">
+            <div style="height: 200vh;">
+                <h2>test2</h2>
+            </div>
+            <h2>test2</h2>
+        </article>
+    </section>
+    <div style="height: 100vh;">
+
+    </div>
+</body>
+</html>
