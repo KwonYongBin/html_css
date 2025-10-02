@@ -1,6 +1,6 @@
-import React from 'react';
-import { createProduct, filterProduct } from './productSlice.js';
+
 import { axiosData, groupByRows } from '../../utils/dataFetch.js';
+import { filterProduct, createProduct } from './ProductSlice.js'
 
 export const getProduct = (pid) => async(dispatch) => {
     // dispatch(filterProduct(pid));
