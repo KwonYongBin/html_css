@@ -1,9 +1,12 @@
 ## 자바스크립트 (JavaScript)
+
 ### 1. 스크립트(Script) 언어
 - HTML 코드에 script를 이용하여 다른 언어의 소스코드를 추가하는 방식
+
 - Client Side Script 
     : JavaScript, VBScript, LiveSCript...
     : 확장자는 .html 네이밍을 가짐
+
 - Server Side Script
     : VBScript, ASP, PHP, JSP...
     : 확장자는 언어의 네이밍을 가짐 .php, .asp, .jsp
