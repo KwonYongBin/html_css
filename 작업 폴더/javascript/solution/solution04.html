@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트</title>
+
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/solution.css"/>
+</head>
+
+<body>
+  <header id="header">
+    <h1><a href="../index.html">Javascript</a></h1>
+    <nav>
+      <ul>
+        <li><a href="solution01.html">기초 문법</a></li>
+        <li><a href="solution02.html">변수</a></li>
+        <li><a href="solution03.html">자료형</a></li>
+        <li class="active"><a href="solution04.html">for문</a></li>
+        <li><a href="solution05.html">연산자</a></li>
+        <li><a href="solution06.html">조건문</a></li>
+        <li><a href="solution07.html">반복문</a></li>
+        <li><a href="solution08.html">함수</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="solution_main">
+    <div class="solution_box">
+      <h2>for()문</h2>
+      <p>for 문은 조건식을 만족할 때까지 특정 코드를 반복하여 실행합니다.</p><br>
+    </div>
+    <div class="solution_box">
+      <h2>for()문 문법</h2>
+      <div class="explanation">
+        <p>
+          <strong>기본형</strong>
+          //초깃값 : 증감할 변수를 선언하고 초기화합니다.<br>
+          //조건식 : 조건식에서 true가 반환되면 반복문을 수행합니다.<br>
+          //증감식 : 초깃값을 증감합니다.<br>
+          for(초깃값; 조건식; 증감식){<br>
+              <em>자바스크립트 코드;</em>
+          }
+        </p>
+      </div>
+      <div class="explanation">
+        <p>
+          <strong>기본형</strong>
+          &lt;script&gt;
+            <em>for( var i = 1; i &lt;= 10; i++) {</em>
+            <em>document.write("반복" + i, "&lt;br&gt;");</em>
+          }<br>
+          &lt;/script&gt;
+        </p>
+      </div>
+    </div>
+    <div class="solution_box">
+      <p style="background: #c3eaff; display: inline-block; padding: 5px 20px; border-radius: 40px">결과</p>
+      <div class="explanation" style="margin-top: 10px; background: none; border: 1px solid rgba(0,0,0,.2);">
+        <ul style="list-style: none;">
+          <li>반복1</li>
+          <li>반복2</li>
+          <li>반복3</li>
+          <li>반복4</li>
+          <li>반복5</li>
+          <li>반복6</li>
+          <li>반복7</li>
+          <li>반복8</li>
+          <li>반복9</li>
+          <li>반복10</li>
+        </ul>
+      </div>
+    </div>
+    <div class="solution_box">
+      <h3>forEach 메서드</h3>
+      <p>forEach() 메서드는 for문과 마찬가지로 반복적인 기능을 수행할 때 사용하지만 오직 배열(Array)객체에서만 활용이 가능한 메서드입니다. 초깃값, 조건식, 증감식을 정의하지 않아도 callback 함수를 통해 기능을 수행할 수 있습니다.</p>
+      <div class="explanation">
+        <strong>기본형</strong>
+        <p>
+          //파라미터1 : 배열의 값<br>
+          //파라미터2 : 배열의 인덱스 번호<br>
+          //파라미터3 : 배열 자체<br>
+          배열명.forEach(콜백함수(파라미터1, 파라미터2, 파라미터3){<br>
+          <em>자바스크립트 코드;</em>
+          });
+        </p>
+      </div>
+      <div class="explanation">
+        <strong>forEach() 예제</strong>
+        <p>const num = [100, 200, 300, 400, 500];</p><br>
+        <p>num.forEach(function(element, index, array){
+          <em>
+            document.write(element + "&lt;br&gt;");<br>
+            document.write(index + "&lt;br&gt;");<br>
+            document.write(array + "&lt;br&gt;");
+          </em>
+          })
+        </p>
+      </div>
+    </div>
+    <div class="solution_box">
+      <p style="background: #c3eaff; display: inline-block; padding: 5px 20px; border-radius: 40px">결과</p>
+      <div class="explanation" style="margin-top: 10px; background: none; border: 1px solid rgba(0,0,0,.2);">
+        <ul style="list-style: none;">
+          <li>100</li>
+          <li>0 </li>
+          <li>100,200,300,400,500</li>
+          <li>200</li>
+          <li>1</li>
+          <li>100,200,300,400,500</li>
+          <li>2</li>
+          <li>100,200,300,400,500</li>
+          <li>400</li>
+          <li>3</li>
+          <li>100,200,300,400,500</li>
+          <li>500</li>
+          <li>4</li>
+          <li>100,200,300,400,500</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

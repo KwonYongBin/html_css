@@ -1,0 +1,61 @@
+:root {
+  --main-font: "Sansita";
+  --sub-font: "gmarket";
+
+  --mainBg-color: #edf0ed;
+  --subBg200: #A4C8E8;
+  --subBg300: #79A7C9;
+  --subBg400: #4384A4;
+  --subBg500: #306C88;
+  --subBg600: #234E6F;
+
+  --white: #fff;
+  --mainfc: #edf0ed;
+  --subfc: #306C88;
+
+  --index: calc(1vw + 1vh);
+	--text: #e7e7e0;
+
+  /* 기본 폰트 설정 */
+  font-family: var(--main-font), var(--sub-font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 아이폰 가로 모드에서 글씨 확대 금지 */
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+  :root {
+      font-size: 14px;
+      line-height: 1.4;
+  }
+}
+
+body {
+  color: var(--subfc);
+  background-color: var(--mainBg-color);
+}
+
+.paraScroll {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 5000;
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 12px;
+  padding: 0px 20px;
+}

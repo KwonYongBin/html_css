@@ -1,0 +1,53 @@
+.intro {
+	transform: translatey(0%);
+}
+.layers {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.layer {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-position: center;
+	background-size: cover;
+	will-change: transform;
+	z-index: 2;
+}
+.layers__base {
+	background-image: url(../../img/layer-base.png);
+	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+	z-index: 0;
+}
+.layers__middle {
+	background-image: url(../../img/layer-middle.png);
+	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+.layers__front {
+	background-image: url(../../img/layer-front.png);
+	transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
+.layer__header {
+	z-index: 100;
+	transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
+	will-change: transform;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: var(--subBg500);
+	text-shadow: 0 0 15px var(--subBg100);
+	font-family: var(--main-fon);
+}
+.layers__title {
+	font-size: calc(var(--index) * 2.65);
+	letter-spacing: calc(var(--index) / 2.25);
+}
+.layers__caption {
+	font-size: calc(var(--index) / 1.175);
+	letter-spacing: calc(var(--index) / 3.5);
+	margin-top: calc(var(--index) * -.75);
+}

@@ -1,0 +1,51 @@
+* {margin: 0; padding: 0;}
+
+body {position: relative; font-family: 'NEXON Lv1 Gothic OTF Light';}
+
+a {text-decoration: none; color: #666;}
+
+h1,h2,h3,h4,h5,h6,em,strong {font-style: normal;}
+
+#header {padding: 50px; border-bottom: 2px dotted #dbdbdb;}
+#main {padding: 50px 50px 250px 50px;}
+
+#header h1 {margin-bottom: 25px;}
+#header h1 a {font-size: 50px; color: #77aeff; line-height: 25px;}
+#header nav li {display: inline-block; margin-bottom: 10px;}
+#header nav li a {display: block; padding: 10px 20px; font-size: 20px; border: 1px solid #000; border-radius: 50px;}
+#header nav li.active a{background: #000; color: #fff;}
+
+
+.solution_box h2 {margin: 10px 0; font-weight: 400;}
+.solution_box .solution01_box > p {padding: 10px 0; font-size: 18px; line-height: 24px;}
+.solution_box h3 {margin: 20px 0 10px; font-size: 20px; font-weight: 500; line-height: 30px; text-decoration: underline;}
+.solution_box p {margin-bottom: 5px;}
+.solution_box .explanation {background: #f4f8fa; margin-bottom: 30px; padding: 15px; border-radius: 10px;}
+.solution_box .explanation strong {display: block; line-height: 50px; font-size: 18px;}
+.solution_box .explanation span {display: block; margin: 20px;}
+.solution_box .explanation p em {display: block; margin: 0 20px 0 20px;}
+
+.solution_box .table {overflow-x: auto;}
+.solution_box .table table {width: 100%; min-width: 800px; border: 1px solid #cdcdcd; border-collapse: collapse;}
+.solution_box .table table th {border-bottom: 1px solid #cdcdcd; border-right: 1px solid #cdcdcd; background-color: #f5f5f5; padding: 15px;}
+.solution_box .table table td {border-bottom: 1px solid #cdcdcd; border-right: 1px solid #cdcdcd; padding: 15px;}
+.solution_box .table table .center {text-align: center;}
+.solution_box .table table .middle {vertical-align: middle;}
+
+@media (max-width: 800px) {
+  .solution_box {
+      font-size: 14px;
+  }
+
+  .solution_box h2 {
+      font-size: 18px;
+  }
+
+  .solution_box .line {
+      padding: 10px 15px;
+  }
+
+  .solution_box .table table {
+      overflow-x: scroll;
+  }
+}

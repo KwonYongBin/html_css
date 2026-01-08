@@ -1,0 +1,18 @@
+
+#header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  font-family: var(--main-font);
+}
+.header__inner {
+  text-align: center;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--subBg300)
+}
+#nav ul {
+  display: flex;
+  justify-content: space-between;
+}

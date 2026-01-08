@@ -1,0 +1,12 @@
+.dom {
+  position: absolute;
+  height: 100vh;
+  background: var(--mainBg-color);
+}
+.dom_title strong {
+  font-size: 3.5rem;
+  padding-top: 37vh;
+  font-family: var(--sub-font);
+  font-weight: 600;
+  text-transform: uppercase;
+}

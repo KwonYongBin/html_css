@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__inner row">
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">YongBin.Kwon</a>
+                    </li>
+                    <li>
+                        <a href="#">FrontEnd</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="paraScroll"><span>0</span>px</div>
+
+        <section id="section1" class="intro">
+            <div class="main-intro section">
+                <div class="layers">
+                    <div class="layer__header">
+                        <div class="layers__caption">Welcome to My Portfolio</div>
+                        <div class="layers__title">frontend developer</div>
+                    </div>
+                    <div class="layer layers__base"></div>
+                    <div class="layer layers__middle"></div>
+                    <div class="layer layers__front"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" class="info">
+            <div class="info__inner row section">
+                <div class="info__box">
+                    <div class="info__text" data-800="right: 100%" data-1600="right: 0%">
+                        <h3>Nothing great in the world has been accomplished without passion.</h3>
+                        <div class="info__desc">
+                            <span>chance</span>
+                            <p class="text1">
+                                알파벳 특수 문자가 섞인 코드라는 언어가 모니터에서 제가 의도한 모습으로 보이는 것에 순간 큰 충격으로 다가왔고
+                                처음 접했던 코드 몇 자가 저의 꿈을 웹 개발로 이끌었습니다. 퍼블리셔를 직업으로 하고자 하는 마음으로, 이젠 컴퓨터 아카데미에서 퍼블리셔
+                                과정을 이수해 웹에 대한 지식을 채우며 수료하였고, 모자란 부분은 책, 영상매체, gpt를 통해 꾸준하게 성장 중이며 스터디를
+                            </p>
+                            <p class="text2">
+                                참여하여 능력을 한층 더 향상하였고, 꾸준히 부족한 부분을 채워나가 한자리에 머물러 있는 사람이 되지 않기 위해
+                                항상 발전하며 다른 누구보다 노력하고 성장해 나아가는 프론트엔드 개발자가 되기위해 공부 하고있습니다. 저의 배움과 도전은 목표에 도달할 때까지
+                                계속될 것입니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info__skill" data-1600="left: 100%" data-2400="left: 0%">
+                        <strong>Html &#47; Css &#47; jQuery &#47; Javascript &#47; Scss &#47; Vite vue
+                            &#47; Next.js &#47; React</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="spawork">
+            <div class="section" data-2400="transform: translatex(250%);" data-3200="transform: translatex(0%);">
+                <div class="dom">
+                    <div class="dom_title">
+                        <strong>Project1</strong>
+                    </div>
+                    <article></article>
+                </div>
+            </div>
+            <!-- //cont_1 -->
+            <div class="section" data-3200="transform: translatex(250%);" data-4000="transform: translatex(5.1%);">
+                <div class="dom">
+                    <div class="dom_title">
+                        <strong>Project2</strong>
+                    </div>
+                    <article></article>
+                </div>
+            </div>
+            <!-- //cont_2 -->
+            <div class="section" data-4000="transform: translatex(250%);" data-4800="transform: translatex(10.2%);">
+                <div class="dom">
+                    <div class="dom_title">
+                        <strong>Project3</strong>
+                    </div>
+                    <article></article>
+                </div>
+            </div>
+            <div class="section" data-4800="transform: translatex(250%);" data-5600="transform: translatex(15.3%);">
+                <div class="dom">
+                    <div class="dom_title">
+                        <strong>Project4</strong>
+                    </div>
+                    <article></article>
+                </div>
+            </div>
+            <!-- //cont_3 -->
+            <div style="position: fixed; z-index: 10000; top: 55px; background-color: aqua; width: 100%; height: 100vh;" data-5800="transform: translatey(100%);" data-6600="transform: translatey(0%);">
+                <div>
+                    <div>
+                        <strong>Project5</strong>
+                        
+                    </div>
+                    <article></article>
+                </div>
+            </div>
+            <!-- //cont_3 -->
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+    <script src="assets/js/motion.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script src="dist/main.js"></script>
+    <script>
+        const lenis = new Lenis();
+
+        lenis.on('scroll', (e) => {
+            console.log(e);
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        var s = skrollr.init();
+    </script>
+</body>
+
+</html>

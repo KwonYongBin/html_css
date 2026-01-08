@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트</title>
+
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/solution.css"/>
+</head>
+
+<body>
+  <header id="header">
+    <h1><a href="../index.html">Javascript</a></h1>
+    <nav>
+      <ul>
+        <li><a href="solution01.html">기초 문법</a></li>
+        <li><a href="solution02.html">변수</a></li>
+        <li><a href="solution03.html">자료형</a></li>
+        <li><a href="solution04.html">for문</a></li>
+        <li><a href="solution05.html">연산자</a></li>
+        <li class="active"><a href="solution06.html">조건문</a></li>
+        <li><a href="solution07.html">반복문</a></li>
+        <li><a href="solution08.html">함수</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="solution_main">
+    <div class="solution_box">
+      <h2>조건문</h2>
+      <p>조건문은 조건식의 값이 참(true)인지, 거짓(false)인지에 따라 자바스크립트 코드를 제어합니다. 조건문의 종류에는 if 문, else 문 그리고 else if 문이 있습니다.</p><br>
+      <h3>if 문</h3>
+      <p>if 문은 조건식을 만족(true)할 경우에만 코드를 실행합니다. 조건식은 앞에서 배웠던 Boolean() 내장 메서드와 마찬가지로 그 어떤 데이터를 입력해도 true 또는 false를 반환합니다.</p>
+      <div class="explanation">
+        <strong>기본형</strong>
+        <p>if(조건식){
+          <em>자바스크립트 코드;</em>
+        </p>}
+      </div>
+      <div class="explanation">
+        <strong>예제</strong>
+        <p>var num=100;</p>
+        <p>if(num < 500 ){
+          <em>document.write("hello");   //true를 반환합니다.</em>
+        </p>}
+      </div>
+      <strong>조건식에 논리형 데이터가 아닌 다른 형이 오는 경우</strong>
+      <p>조건식에 논리형 데이터(true, false)가 아닌 다른 형의 데이터가 입력되어도 true 또는 false로 인식됩니다. 다음 값이 조건식에 입력되면 false를 반환하지만 그 밖의 값은 true로 인식합니다.</p>
+      <div class="explanation" style="margin-top: 10px; background: none; border: 1px solid rgba(0,0,0,.2);">
+        <p>0, null, ""(빈문자), undefined</p>
+      </div>
+      <div class="explanation">
+        <strong>false를 반환하는 값</strong>
+        <p>var num=0;</p>
+        <p>if(num){   //num이 false를 반환해서 코드가 실행되지 않는다.
+          <em>document.write(num);</em>
+        </p>}
+      </div>
+    </div>
+    <div class="solution_box">
+      <h3>else문</h3>
+      <p>else문은 조건식을 만족할(true) 경우와 만족하지 않을(false) 경우에 따라 실행되는 코드가 달라집니다.</p>
+      <div class="explanation">
+        <strong>기본형</strong>
+        <p>if(조건식){
+          <em>자바스크립트 코드;</em>
+        }else{
+          <em>자바스크립트 코드;</em>
+        </p>}
+      </div>
+      <div class="explanation">
+        <strong>else문 예제</strong>
+        <p>
+          var yourNumber = prompt("좋아하는 숫자를 입력하시오.");<br>
+          var num = yourNumber % 2;
+        </p><br>
+        <p>
+          if(num){<br>
+          <em>ddocument.write("당신이 좋아하는 숫자는 홀수입니다.");   //홀수 입력시 실행</em>
+          }else{<br>
+          <em>document.write("당신이 좋아하는 숫자는 짝수입니다.");   //짝수 입력시 실행</em>
+          }
+        </p>
+      </div>
+      <strong>조건식에 논리형 데이터가 아닌 다른 형이 오는 경우</strong>
+      <p>조건식에 논리형 데이터(true, false)가 아닌 다른 형의 데이터가 입력되어도 true 또는 false로 인식됩니다. 다음 값이 조건식에 입력되면 false를 반환하지만 그 밖의 값은 true로 인식합니다.</p>
+      <div class="explanation" style="margin-top: 10px; background: none; border: 1px solid rgba(0,0,0,.2);">
+        <p>0, null, ""(빈문자), undefined</p>
+      </div>
+      <div class="explanation">
+        <strong>false를 반환하는 값</strong>
+        <p>var num=0;</p>
+        <p>if(num){   //num이 false를 반환해서 코드가 실행되지 않는다.
+          <em>document.write(num);</em>
+        </p>}
+      </div>
+    </div>
+    <div class="solution_box">
+      <h3>else문</h3>
+      <p>else문은 조건식을 만족할(true) 경우와 만족하지 않을(false) 경우에 따라 실행되는 코드가 달라집니다.</p>
+      <div class="explanation">
+        <strong>기본형</strong>
+        <p>if(조건식){
+          <em>코드1;</em>
+        }elseif(조건식2){
+          <em>코드2;</em>
+        }else if(조건식3){
+          <em>코드3;</em>
+        }else{
+          <em>코드4;</em>
+        </p>}
+      </div>
+      <div class="explanation">
+        <strong>else if문 예제</strong>
+        <p>
+          var mon = prompt("현재는 몇 월입니까?", "0");
+        </p><br>
+        <p>
+          if(mon >= 9 && mon <= 11){<br>
+          <em>document.write("독서의 계절 가을이네요!!");      //9 or 10 or 11 입력시 실행</em>
+          }else if(mon >=6 && mon <= 8){<br>
+          <em>document.write("여행가기 좋은 여름이네요!!");   //6 or 7 or 8 입력시 실행</em>
+          }else if(mon >= 3 && mon <= 5){<br>
+          <em>document.write("햇살 가득한 봄이네요!!");        //3 or 4 or 5 입력시 실행</em>
+          }else{<br>
+          <em>document.write("스키의 계절 겨울이네요!!");     //그 외 입력시 실행</em>
+          }
+        </p>
+      </div>
+    </div>
+    <div class="solution_box">
+      <h3>중첩 if문</h3>
+      <p>조건문 안에 조건문이 있으면 중첩 if문이라고 합니다.</p>
+      <div class="explanation">
+        <strong>기본형</strong>
+        <p>if(조건식1){
+          <em>if(조건식2){</em>
+            <em style="margin-left: 40px; display: block;">자바스크립트 코드;</em>
+            <em>}</em>
+          </p>}
+        </div>
+        <p>중첩 if문은 바깥쪽에 있는 조건문인 조건문1을 만족해야만 안쪽에 있는 조건문인 조건문 2를 검사합니다. 만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건문1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.</p>
+        <div class="explanation">
+        <strong>else if문 예제</strong>
+        <p>
+          var id = "easy1004";<br>
+          var pw = "112233";
+        </p><br>
+        <p>
+          var user_id = prompt("ID?","");<br>
+          var user_pw = prompt("Password?","");
+        </p><br>
+        <p>
+          if(id == user_id){<br>
+          <em>if(pw == user_pw){</em>
+          <em style="margin-left: 40px;">document.write(user_id+"님 반갑습니다.");   //id와 pw가 모두 일치하면 실행</em>
+          <em>}else{</em>
+          <em style="margin-left: 40px;">alert("비밀번호가 일치하지 않습니다.");          //id는 일치하고 pw가 불일치하면 실행</em>
+          <em style="margin-left: 40px;">location.reload();                                    //브라우저새로고침</em>
+          <em>]</em>
+          }else{<br>
+          <em>alert("아이디가 일치하지 않습니다.");                //id가 불일치 하면 실행합니다</em>
+          <em>location.reload();</em>
+          }
+        </p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
